@@ -11,14 +11,15 @@
   "license": "MIT",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
-  "types": "dist/types/index.d.ts",
+  "types": "dist/esm/type.d.ts",
   "files": [
     "/dist"
   ],
   "scripts": {
     "build": "tsc --project tsconfig.json && tsc --project tsconfig.cjs.json",
     "release": "npm run build && changeset publish",
-    "test": "jest --coverage"
+    "test": "jest --coverage",
+    "test:types": "tsc --project tsconfig.check.json"
   },
   "devDependencies": {
     "@changesets/cli": "^2.27.5",
