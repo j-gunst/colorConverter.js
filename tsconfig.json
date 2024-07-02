@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "target": "es2020",
+    "module": "ESNext",
+    "declaration": true,
+    "outDir": "./dist/esm",
+    "strict": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true
+  },
+  "include": ["src/**/*", "__tests__/*"],
+  "exclude": ["node_modules", "**/__tests__/*"]
+}
