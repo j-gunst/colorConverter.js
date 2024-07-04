@@ -1,5 +1,11 @@
 # @nawael/color-utils
 
+## 1.0.3
+
+### Patch Changes
+
+- 2ef6067: import type
+
 ## 1.0.2
 
 ### Patch Changes
