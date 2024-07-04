@@ -1,3 +1,6 @@
+export declare const rgbToHex: (arg: string) => string
+export declare const rgbToHsl: (arg: string) => string
+
 export type RgbValues = {
   r: string
   g: string
