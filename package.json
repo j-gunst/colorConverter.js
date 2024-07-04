@@ -18,8 +18,7 @@
   "scripts": {
     "build": "tsc --project tsconfig.json && tsc --project tsconfig.cjs.json",
     "release": "npm run build && changeset publish",
-    "test": "jest --coverage",
-    "test:types": "tsc --project tsconfig.check.json"
+    "test": "jest --coverage"
   },
   "devDependencies": {
     "@changesets/cli": "^2.27.5",
