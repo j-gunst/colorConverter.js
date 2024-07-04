@@ -1,12 +1,19 @@
 {
-  "name": "@nawael/color-utils",
-  "version": "1.0.3",
-  "description": "",
-  "keywords": [],
+  "name": "@nawael/color-converter.js",
+  "version": "1.0.0",
+  "description": "Some utilities to convert CSS color to RGB, HEX and HSL",
+  "keywords": [
+    "color",
+    "rgb",
+    "hex",
+    "hsl",
+    "css",
+    "converter"
+  ],
   "author": "Nawael",
   "repository": {
     "type": "git",
-    "url": "https://github.com/nwl-x/color-utils.git"
+    "url": "https://github.com/nwl-x/colorConverter.js.git"
   },
   "license": "MIT",
   "main": "dist/cjs/index.js",

@@ -1,0 +1,2074 @@
+{
+  "AliceBlue": {
+    "name": "AliceBlue",
+    "hex": "#f0f8ff",
+    "rgb": {
+      "red": 240,
+      "green": 248,
+      "blue": 255
+    },
+    "hsl": {
+      "hue": 208,
+      "saturation": 100,
+      "lightness": 97
+    }
+  },
+  "AntiqueWhite": {
+    "name": "AntiqueWhite",
+    "hex": "#faebd7",
+    "rgb": {
+      "red": 250,
+      "green": 235,
+      "blue": 215
+    },
+    "hsl": {
+      "hue": 30,
+      "saturation": 100,
+      "lightness": 92
+    }
+  },
+  "Aqua": {
+    "name": "Aqua",
+    "hex": "#00ffff",
+    "rgb": {
+      "red": 0,
+      "green": 255,
+      "blue": 255
+    },
+    "hsl": {
+      "hue": 180,
+      "saturation": 100,
+      "lightness": 50
+    }
+  },
+  "Aquamarine": {
+    "name": "Aquamarine",
+    "hex": "#7fffd4",
+    "rgb": {
+      "red": 127,
+      "green": 255,
+      "blue": 212
+    },
+    "hsl": {
+      "hue": 160,
+      "saturation": 100,
+      "lightness": 75
+    }
+  },
+  "Azure": {
+    "name": "Azure",
+    "hex": "#f0ffff",
+    "rgb": {
+      "red": 240,
+      "green": 255,
+      "blue": 255
+    },
+    "hsl": {
+      "hue": 180,
+      "saturation": 100,
+      "lightness": 98
+    }
+  },
+  "Beige": {
+    "name": "Beige",
+    "hex": "#f5f5dc",
+    "rgb": {
+      "red": 245,
+      "green": 245,
+      "blue": 220
+    },
+    "hsl": {
+      "hue": 60,
+      "saturation": 56,
+      "lightness": 91
+    }
+  },
+  "Bisque": {
+    "name": "Bisque",
+    "hex": "#ffe4c4",
+    "rgb": {
+      "red": 255,
+      "green": 228,
+      "blue": 196
+    },
+    "hsl": {
+      "hue": 30,
+      "saturation": 100,
+      "lightness": 88
+    }
+  },
+  "Black": {
+    "name": "Black",
+    "hex": "#000000",
+    "rgb": {
+      "red": 0,
+      "green": 0,
+      "blue": 0
+    },
+    "hsl": {
+      "hue": 0,
+      "saturation": 0,
+      "lightness": 0
+    }
+  },
+  "BlanchedAlmond": {
+    "name": "BlanchedAlmond",
+    "hex": "#ffebcd",
+    "rgb": {
+      "red": 255,
+      "green": 235,
+      "blue": 205
+    },
+    "hsl": {
+      "hue": 30,
+      "saturation": 100,
+      "lightness": 91
+    }
+  },
+  "Blue": {
+    "name": "Blue",
+    "hex": "#0000ff",
+    "rgb": {
+      "red": 0,
+      "green": 0,
+      "blue": 255
+    },
+    "hsl": {
+      "hue": 240,
+      "saturation": 100,
+      "lightness": 50
+    }
+  },
+  "BlueViolet": {
+    "name": "BlueViolet",
+    "hex": "#8a2be2",
+    "rgb": {
+      "red": 138,
+      "green": 43,
+      "blue": 226
+    },
+    "hsl": {
+      "hue": 271,
+      "saturation": 76,
+      "lightness": 53
+    }
+  },
+  "Brown": {
+    "name": "Brown",
+    "hex": "#a52a2a",
+    "rgb": {
+      "red": 165,
+      "green": 42,
+      "blue": 42
+    },
+    "hsl": {
+      "hue": 0,
+      "saturation": 60,
+      "lightness": 40
+    }
+  },
+  "BurlyWood": {
+    "name": "BurlyWood",
+    "hex": "#deb887",
+    "rgb": {
+      "red": 222,
+      "green": 184,
+      "blue": 135
+    },
+    "hsl": {
+      "hue": 34,
+      "saturation": 57,
+      "lightness": 70
+    }
+  },
+  "CadetBlue": {
+    "name": "CadetBlue",
+    "hex": "#5f9ea0",
+    "rgb": {
+      "red": 95,
+      "green": 158,
+      "blue": 160
+    },
+    "hsl": {
+      "hue": 182,
+      "saturation": 25,
+      "lightness": 50
+    }
+  },
+  "Chartreuse": {
+    "name": "Chartreuse",
+    "hex": "#7fff00",
+    "rgb": {
+      "red": 127,
+      "green": 255,
+      "blue": 0
+    },
+    "hsl": {
+      "hue": 90,
+      "saturation": 100,
+      "lightness": 50
+    }
+  },
+  "Chocolate": {
+    "name": "Chocolate",
+    "hex": "#d2691e",
+    "rgb": {
+      "red": 210,
+      "green": 105,
+      "blue": 30
+    },
+    "hsl": {
+      "hue": 25,
+      "saturation": 75,
+      "lightness": 47
+    }
+  },
+  "Coral": {
+    "name": "Coral",
+    "hex": "#ff7f50",
+    "rgb": {
+      "red": 255,
+      "green": 127,
+      "blue": 80
+    },
+    "hsl": {
+      "hue": 16,
+      "saturation": 100,
+      "lightness": 66
+    }
+  },
+  "CornflowerBlue": {
+    "name": "CornflowerBlue",
+    "hex": "#6495ed",
+    "rgb": {
+      "red": 100,
+      "green": 149,
+      "blue": 237
+    },
+    "hsl": {
+      "hue": 219,
+      "saturation": 79,
+      "lightness": 66
+    }
+  },
+  "Cornsilk": {
+    "name": "Cornsilk",
+    "hex": "#fff8dc",
+    "rgb": {
+      "red": 255,
+      "green": 248,
+      "blue": 220
+    },
+    "hsl": {
+      "hue": 48,
+      "saturation": 100,
+      "lightness": 93
+    }
+  },
+  "Crimson": {
+    "name": "Crimson",
+    "hex": "#dc143c",
+    "rgb": {
+      "red": 220,
+      "green": 20,
+      "blue": 60
+    },
+    "hsl": {
+      "hue": 348,
+      "saturation": 83,
+      "lightness": 47
+    }
+  },
+  "Cyan": {
+    "name": "Cyan",
+    "hex": "#00ffff",
+    "rgb": {
+      "red": 0,
+      "green": 255,
+      "blue": 255
+    },
+    "hsl": {
+      "hue": 180,
+      "saturation": 100,
+      "lightness": 50
+    }
+  },
+  "DarkBlue": {
+    "name": "DarkBlue",
+    "hex": "#00008b",
+    "rgb": {
+      "red": 0,
+      "green": 0,
+      "blue": 139
+    },
+    "hsl": {
+      "hue": 240,
+      "saturation": 100,
+      "lightness": 27
+    }
+  },
+  "DarkCyan": {
+    "name": "DarkCyan",
+    "hex": "#008b8b",
+    "rgb": {
+      "red": 0,
+      "green": 139,
+      "blue": 139
+    },
+    "hsl": {
+      "hue": 180,
+      "saturation": 100,
+      "lightness": 27
+    }
+  },
+  "DarkGoldenRod": {
+    "name": "DarkGoldenRod",
+    "hex": "#b8860b",
+    "rgb": {
+      "red": 184,
+      "green": 134,
+      "blue": 11
+    },
+    "hsl": {
+      "hue": 43,
+      "saturation": 89,
+      "lightness": 38
+    }
+  },
+  "DarkGray": {
+    "name": "DarkGray",
+    "hex": "#a9a9a9",
+    "rgb": {
+      "red": 169,
+      "green": 169,
+      "blue": 169
+    },
+    "hsl": {
+      "hue": 0,
+      "saturation": 0,
+      "lightness": 66
+    }
+  },
+  "DarkGrey": {
+    "name": "DarkGrey",
+    "hex": "#a9a9a9",
+    "rgb": {
+      "red": 169,
+      "green": 169,
+      "blue": 169
+    },
+    "hsl": {
+      "hue": 0,
+      "saturation": 0,
+      "lightness": 66
+    }
+  },
+  "DarkGreen": {
+    "name": "DarkGreen",
+    "hex": "#006400",
+    "rgb": {
+      "red": 0,
+      "green": 100,
+      "blue": 0
+    },
+    "hsl": {
+      "hue": 120,
+      "saturation": 100,
+      "lightness": 20
+    }
+  },
+  "DarkKhaki": {
+    "name": "DarkKhaki",
+    "hex": "#bdb76b",
+    "rgb": {
+      "red": 189,
+      "green": 183,
+      "blue": 107
+    },
+    "hsl": {
+      "hue": 56,
+      "saturation": 38,
+      "lightness": 58
+    }
+  },
+  "DarkMagenta": {
+    "name": "DarkMagenta",
+    "hex": "#8b008b",
+    "rgb": {
+      "red": 139,
+      "green": 0,
+      "blue": 139
+    },
+    "hsl": {
+      "hue": 300,
+      "saturation": 100,
+      "lightness": 27
+    }
+  },
+  "DarkOliveGreen": {
+    "name": "DarkOliveGreen",
+    "hex": "#556b2f",
+    "rgb": {
+      "red": 85,
+      "green": 107,
+      "blue": 47
+    },
+    "hsl": {
+      "hue": 82,
+      "saturation": 39,
+      "lightness": 30
+    }
+  },
+  "Darkorange": {
+    "name": "Darkorange",
+    "hex": "#ff8c00",
+    "rgb": {
+      "red": 255,
+      "green": 140,
+      "blue": 0
+    },
+    "hsl": {
+      "hue": 33,
+      "saturation": 100,
+      "lightness": 50
+    }
+  },
+  "DarkOrchid": {
+    "name": "DarkOrchid",
+    "hex": "#9932cc",
+    "rgb": {
+      "red": 153,
+      "green": 50,
+      "blue": 204
+    },
+    "hsl": {
+      "hue": 280,
+      "saturation": 61,
+      "lightness": 50
+    }
+  },
+  "DarkRed": {
+    "name": "DarkRed",
+    "hex": "#8b0000",
+    "rgb": {
+      "red": 139,
+      "green": 0,
+      "blue": 0
+    },
+    "hsl": {
+      "hue": 0,
+      "saturation": 100,
+      "lightness": 27
+    }
+  },
+  "DarkSalmon": {
+    "name": "DarkSalmon",
+    "hex": "#e9967a",
+    "rgb": {
+      "red": 233,
+      "green": 150,
+      "blue": 122
+    },
+    "hsl": {
+      "hue": 15,
+      "saturation": 72,
+      "lightness": 70
+    }
+  },
+  "DarkSeaGreen": {
+    "name": "DarkSeaGreen",
+    "hex": "#8fbc8f",
+    "rgb": {
+      "red": 143,
+      "green": 188,
+      "blue": 143
+    },
+    "hsl": {
+      "hue": 120,
+      "saturation": 25,
+      "lightness": 65
+    }
+  },
+  "DarkSlateBlue": {
+    "name": "DarkSlateBlue",
+    "hex": "#483d8b",
+    "rgb": {
+      "red": 72,
+      "green": 61,
+      "blue": 139
+    },
+    "hsl": {
+      "hue": 248,
+      "saturation": 39,
+      "lightness": 39
+    }
+  },
+  "DarkSlateGray": {
+    "name": "DarkSlateGray",
+    "hex": "#2f4f4f",
+    "rgb": {
+      "red": 47,
+      "green": 79,
+      "blue": 79
+    },
+    "hsl": {
+      "hue": 180,
+      "saturation": 25,
+      "lightness": 25
+    }
+  },
+  "DarkSlateGrey": {
+    "name": "DarkSlateGrey",
+    "hex": "#2f4f4f",
+    "rgb": {
+      "red": 47,
+      "green": 79,
+      "blue": 79
+    },
+    "hsl": {
+      "hue": 180,
+      "saturation": 25,
+      "lightness": 25
+    }
+  },
+  "DarkTurquoise": {
+    "name": "DarkTurquoise",
+    "hex": "#00ced1",
+    "rgb": {
+      "red": 0,
+      "green": 206,
+      "blue": 209
+    },
+    "hsl": {
+      "hue": 180,
+      "saturation": 100,
+      "lightness": 41
+    }
+  },
+  "DarkViolet": {
+    "name": "DarkViolet",
+    "hex": "#9400d3",
+    "rgb": {
+      "red": 148,
+      "green": 0,
+      "blue": 211
+    },
+    "hsl": {
+      "hue": 282,
+      "saturation": 100,
+      "lightness": 41
+    }
+  },
+  "DeepPink": {
+    "name": "DeepPink",
+    "hex": "#ff1493",
+    "rgb": {
+      "red": 255,
+      "green": 20,
+      "blue": 147
+    },
+    "hsl": {
+      "hue": 328,
+      "saturation": 100,
+      "lightness": 54
+    }
+  },
+  "DeepSkyBlue": {
+    "name": "DeepSkyBlue",
+    "hex": "#00bfff",
+    "rgb": {
+      "red": 0,
+      "green": 191,
+      "blue": 255
+    },
+    "hsl": {
+      "hue": 195,
+      "saturation": 100,
+      "lightness": 50
+    }
+  },
+  "DimGray": {
+    "name": "DimGray",
+    "hex": "#696969",
+    "rgb": {
+      "red": 105,
+      "green": 105,
+      "blue": 105
+    },
+    "hsl": {
+      "hue": 0,
+      "saturation": 0,
+      "lightness": 41
+    }
+  },
+  "DimGrey": {
+    "name": "DimGrey",
+    "hex": "#696969",
+    "rgb": {
+      "red": 105,
+      "green": 105,
+      "blue": 105
+    },
+    "hsl": {
+      "hue": 0,
+      "saturation": 0,
+      "lightness": 41
+    }
+  },
+  "DodgerBlue": {
+    "name": "DodgerBlue",
+    "hex": "#1e90ff",
+    "rgb": {
+      "red": 30,
+      "green": 144,
+      "blue": 255
+    },
+    "hsl": {
+      "hue": 210,
+      "saturation": 100,
+      "lightness": 56
+    }
+  },
+  "FireBrick": {
+    "name": "FireBrick",
+    "hex": "#b22222",
+    "rgb": {
+      "red": 178,
+      "green": 34,
+      "blue": 34
+    },
+    "hsl": {
+      "hue": 0,
+      "saturation": 68,
+      "lightness": 42
+    }
+  },
+  "FloralWhite": {
+    "name": "FloralWhite",
+    "hex": "#fffaf0",
+    "rgb": {
+      "red": 255,
+      "green": 250,
+      "blue": 240
+    },
+    "hsl": {
+      "hue": 40,
+      "saturation": 100,
+      "lightness": 97
+    }
+  },
+  "ForestGreen": {
+    "name": "ForestGreen",
+    "hex": "#228b22",
+    "rgb": {
+      "red": 34,
+      "green": 139,
+      "blue": 34
+    },
+    "hsl": {
+      "hue": 120,
+      "saturation": 61,
+      "lightness": 34
+    }
+  },
+  "Fuchsia": {
+    "name": "Fuchsia",
+    "hex": "#ff00ff",
+    "rgb": {
+      "red": 255,
+      "green": 0,
+      "blue": 255
+    },
+    "hsl": {
+      "hue": 300,
+      "saturation": 100,
+      "lightness": 50
+    }
+  },
+  "Gainsboro": {
+    "name": "Gainsboro",
+    "hex": "#dcdcdc",
+    "rgb": {
+      "red": 220,
+      "green": 220,
+      "blue": 220
+    },
+    "hsl": {
+      "hue": 0,
+      "saturation": 0,
+      "lightness": 86
+    }
+  },
+  "GhostWhite": {
+    "name": "GhostWhite",
+    "hex": "#f8f8ff",
+    "rgb": {
+      "red": 248,
+      "green": 248,
+      "blue": 255
+    },
+    "hsl": {
+      "hue": 240,
+      "saturation": 100,
+      "lightness": 99
+    }
+  },
+  "Gold": {
+    "name": "Gold",
+    "hex": "#ffd700",
+    "rgb": {
+      "red": 255,
+      "green": 215,
+      "blue": 0
+    },
+    "hsl": {
+      "hue": 51,
+      "saturation": 100,
+      "lightness": 50
+    }
+  },
+  "GoldenRod": {
+    "name": "GoldenRod",
+    "hex": "#daa520",
+    "rgb": {
+      "red": 218,
+      "green": 165,
+      "blue": 32
+    },
+    "hsl": {
+      "hue": 43,
+      "saturation": 74,
+      "lightness": 49
+    }
+  },
+  "Gray": {
+    "name": "Gray",
+    "hex": "#808080",
+    "rgb": {
+      "red": 128,
+      "green": 128,
+      "blue": 128
+    },
+    "hsl": {
+      "hue": 0,
+      "saturation": 0,
+      "lightness": 50
+    }
+  },
+  "Grey": {
+    "name": "Grey",
+    "hex": "#808080",
+    "rgb": {
+      "red": 128,
+      "green": 128,
+      "blue": 128
+    },
+    "hsl": {
+      "hue": 0,
+      "saturation": 0,
+      "lightness": 50
+    }
+  },
+  "Green": {
+    "name": "Green",
+    "hex": "#008000",
+    "rgb": {
+      "red": 0,
+      "green": 128,
+      "blue": 0
+    },
+    "hsl": {
+      "hue": 120,
+      "saturation": 100,
+      "lightness": 25
+    }
+  },
+  "GreenYellow": {
+    "name": "GreenYellow",
+    "hex": "#adff2f",
+    "rgb": {
+      "red": 173,
+      "green": 255,
+      "blue": 47
+    },
+    "hsl": {
+      "hue": 84,
+      "saturation": 100,
+      "lightness": 59
+    }
+  },
+  "HoneyDew": {
+    "name": "HoneyDew",
+    "hex": "#f0fff0",
+    "rgb": {
+      "red": 240,
+      "green": 255,
+      "blue": 240
+    },
+    "hsl": {
+      "hue": 120,
+      "saturation": 100,
+      "lightness": 97
+    }
+  },
+  "HotPink": {
+    "name": "HotPink",
+    "hex": "#ff69b4",
+    "rgb": {
+      "red": 255,
+      "green": 105,
+      "blue": 180
+    },
+    "hsl": {
+      "hue": 330,
+      "saturation": 100,
+      "lightness": 71
+    }
+  },
+  "IndianRed": {
+    "name": "IndianRed",
+    "hex": "#cd5c5c",
+    "rgb": {
+      "red": 205,
+      "green": 92,
+      "blue": 92
+    },
+    "hsl": {
+      "hue": 0,
+      "saturation": 53,
+      "lightness": 58
+    }
+  },
+  "Indigo": {
+    "name": "Indigo",
+    "hex": "#4b0082",
+    "rgb": {
+      "red": 75,
+      "green": 0,
+      "blue": 130
+    },
+    "hsl": {
+      "hue": 275,
+      "saturation": 100,
+      "lightness": 25
+    }
+  },
+  "Ivory": {
+    "name": "Ivory",
+    "hex": "#fffff0",
+    "rgb": {
+      "red": 255,
+      "green": 255,
+      "blue": 240
+    },
+    "hsl": {
+      "hue": 60,
+      "saturation": 100,
+      "lightness": 97
+    }
+  },
+  "Khaki": {
+    "name": "Khaki",
+    "hex": "#f0e68c",
+    "rgb": {
+      "red": 240,
+      "green": 230,
+      "blue": 140
+    },
+    "hsl": {
+      "hue": 54,
+      "saturation": 77,
+      "lightness": 75
+    }
+  },
+  "Lavender": {
+    "name": "Lavender",
+    "hex": "#e6e6fa",
+    "rgb": {
+      "red": 230,
+      "green": 230,
+      "blue": 250
+    },
+    "hsl": {
+      "hue": 240,
+      "saturation": 67,
+      "lightness": 94
+    }
+  },
+  "LavenderBlush": {
+    "name": "LavenderBlush",
+    "hex": "#fff0f5",
+    "rgb": {
+      "red": 255,
+      "green": 240,
+      "blue": 245
+    },
+    "hsl": {
+      "hue": 340,
+      "saturation": 100,
+      "lightness": 97
+    }
+  },
+  "LawnGreen": {
+    "name": "LawnGreen",
+    "hex": "#7cfc00",
+    "rgb": {
+      "red": 124,
+      "green": 252,
+      "blue": 0
+    },
+    "hsl": {
+      "hue": 90,
+      "saturation": 100,
+      "lightness": 49
+    }
+  },
+  "LemonChiffon": {
+    "name": "LemonChiffon",
+    "hex": "#fffacd",
+    "rgb": {
+      "red": 255,
+      "green": 250,
+      "blue": 205
+    },
+    "hsl": {
+      "hue": 54,
+      "saturation": 100,
+      "lightness": 90
+    }
+  },
+  "LightBlue": {
+    "name": "LightBlue",
+    "hex": "#add8e6",
+    "rgb": {
+      "red": 173,
+      "green": 216,
+      "blue": 230
+    },
+    "hsl": {
+      "hue": 195,
+      "saturation": 53,
+      "lightness": 79
+    }
+  },
+  "LightCoral": {
+    "name": "LightCoral",
+    "hex": "#f08080",
+    "rgb": {
+      "red": 240,
+      "green": 128,
+      "blue": 128
+    },
+    "hsl": {
+      "hue": 0,
+      "saturation": 79,
+      "lightness": 72
+    }
+  },
+  "LightCyan": {
+    "name": "LightCyan",
+    "hex": "#e0ffff",
+    "rgb": {
+      "red": 224,
+      "green": 255,
+      "blue": 255
+    },
+    "hsl": {
+      "hue": 180,
+      "saturation": 100,
+      "lightness": 94
+    }
+  },
+  "LightGoldenRodYellow": {
+    "name": "LightGoldenRodYellow",
+    "hex": "#fafad2",
+    "rgb": {
+      "red": 250,
+      "green": 250,
+      "blue": 210
+    },
+    "hsl": {
+      "hue": 60,
+      "saturation": 80,
+      "lightness": 90
+    }
+  },
+  "LightGray": {
+    "name": "LightGray",
+    "hex": "#d3d3d3",
+    "rgb": {
+      "red": 211,
+      "green": 211,
+      "blue": 211
+    },
+    "hsl": {
+      "hue": 0,
+      "saturation": 0,
+      "lightness": 83
+    }
+  },
+  "LightGrey": {
+    "name": "LightGrey",
+    "hex": "#d3d3d3",
+    "rgb": {
+      "red": 211,
+      "green": 211,
+      "blue": 211
+    },
+    "hsl": {
+      "hue": 0,
+      "saturation": 0,
+      "lightness": 83
+    }
+  },
+  "LightGreen": {
+    "name": "LightGreen",
+    "hex": "#90ee90",
+    "rgb": {
+      "red": 144,
+      "green": 238,
+      "blue": 144
+    },
+    "hsl": {
+      "hue": 120,
+      "saturation": 73,
+      "lightness": 75
+    }
+  },
+  "LightPink": {
+    "name": "LightPink",
+    "hex": "#ffb6c1",
+    "rgb": {
+      "red": 255,
+      "green": 182,
+      "blue": 193
+    },
+    "hsl": {
+      "hue": 351,
+      "saturation": 100,
+      "lightness": 86
+    }
+  },
+  "LightSalmon": {
+    "name": "LightSalmon",
+    "hex": "#ffa07a",
+    "rgb": {
+      "red": 255,
+      "green": 160,
+      "blue": 122
+    },
+    "hsl": {
+      "hue": 17,
+      "saturation": 100,
+      "lightness": 74
+    }
+  },
+  "LightSeaGreen": {
+    "name": "LightSeaGreen",
+    "hex": "#20b2aa",
+    "rgb": {
+      "red": 32,
+      "green": 178,
+      "blue": 170
+    },
+    "hsl": {
+      "hue": 177,
+      "saturation": 70,
+      "lightness": 41
+    }
+  },
+  "LightSkyBlue": {
+    "name": "LightSkyBlue",
+    "hex": "#87cefa",
+    "rgb": {
+      "red": 135,
+      "green": 206,
+      "blue": 250
+    },
+    "hsl": {
+      "hue": 203,
+      "saturation": 92,
+      "lightness": 75
+    }
+  },
+  "LightSlateGray": {
+    "name": "LightSlateGray",
+    "hex": "#778899",
+    "rgb": {
+      "red": 119,
+      "green": 136,
+      "blue": 153
+    },
+    "hsl": {
+      "hue": 210,
+      "saturation": 14,
+      "lightness": 53
+    }
+  },
+  "LightSlateGrey": {
+    "name": "LightSlateGrey",
+    "hex": "#778899",
+    "rgb": {
+      "red": 119,
+      "green": 136,
+      "blue": 153
+    },
+    "hsl": {
+      "hue": 210,
+      "saturation": 14,
+      "lightness": 53
+    }
+  },
+  "LightSteelBlue": {
+    "name": "LightSteelBlue",
+    "hex": "#b0c4de",
+    "rgb": {
+      "red": 176,
+      "green": 196,
+      "blue": 222
+    },
+    "hsl": {
+      "hue": 214,
+      "saturation": 41,
+      "lightness": 78
+    }
+  },
+  "LightYellow": {
+    "name": "LightYellow",
+    "hex": "#ffffe0",
+    "rgb": {
+      "red": 255,
+      "green": 255,
+      "blue": 224
+    },
+    "hsl": {
+      "hue": 60,
+      "saturation": 100,
+      "lightness": 94
+    }
+  },
+  "Lime": {
+    "name": "Lime",
+    "hex": "#00ff00",
+    "rgb": {
+      "red": 0,
+      "green": 255,
+      "blue": 0
+    },
+    "hsl": {
+      "hue": 120,
+      "saturation": 100,
+      "lightness": 50
+    }
+  },
+  "LimeGreen": {
+    "name": "LimeGreen",
+    "hex": "#32cd32",
+    "rgb": {
+      "red": 50,
+      "green": 205,
+      "blue": 50
+    },
+    "hsl": {
+      "hue": 120,
+      "saturation": 61,
+      "lightness": 50
+    }
+  },
+  "Linen": {
+    "name": "Linen",
+    "hex": "#faf0e6",
+    "rgb": {
+      "red": 250,
+      "green": 240,
+      "blue": 230
+    },
+    "hsl": {
+      "hue": 30,
+      "saturation": 67,
+      "lightness": 94
+    }
+  },
+  "Magenta": {
+    "name": "Magenta",
+    "hex": "#ff00ff",
+    "rgb": {
+      "red": 255,
+      "green": 0,
+      "blue": 255
+    },
+    "hsl": {
+      "hue": 300,
+      "saturation": 100,
+      "lightness": 50
+    }
+  },
+  "Maroon": {
+    "name": "Maroon",
+    "hex": "#800000",
+    "rgb": {
+      "red": 128,
+      "green": 0,
+      "blue": 0
+    },
+    "hsl": {
+      "hue": 0,
+      "saturation": 100,
+      "lightness": 25
+    }
+  },
+  "MediumAquaMarine": {
+    "name": "MediumAquaMarine",
+    "hex": "#66cdaa",
+    "rgb": {
+      "red": 102,
+      "green": 205,
+      "blue": 170
+    },
+    "hsl": {
+      "hue": 160,
+      "saturation": 51,
+      "lightness": 60
+    }
+  },
+  "MediumBlue": {
+    "name": "MediumBlue",
+    "hex": "#0000cd",
+    "rgb": {
+      "red": 0,
+      "green": 0,
+      "blue": 205
+    },
+    "hsl": {
+      "hue": 240,
+      "saturation": 100,
+      "lightness": 40
+    }
+  },
+  "MediumOrchid": {
+    "name": "MediumOrchid",
+    "hex": "#ba55d3",
+    "rgb": {
+      "red": 186,
+      "green": 85,
+      "blue": 211
+    },
+    "hsl": {
+      "hue": 288,
+      "saturation": 59,
+      "lightness": 58
+    }
+  },
+  "MediumPurple": {
+    "name": "MediumPurple",
+    "hex": "#9370d8",
+    "rgb": {
+      "red": 147,
+      "green": 112,
+      "blue": 216
+    },
+    "hsl": {
+      "hue": 260,
+      "saturation": 57,
+      "lightness": 64
+    }
+  },
+  "MediumSeaGreen": {
+    "name": "MediumSeaGreen",
+    "hex": "#3cb371",
+    "rgb": {
+      "red": 60,
+      "green": 179,
+      "blue": 113
+    },
+    "hsl": {
+      "hue": 147,
+      "saturation": 50,
+      "lightness": 47
+    }
+  },
+  "MediumSlateBlue": {
+    "name": "MediumSlateBlue",
+    "hex": "#7b68ee",
+    "rgb": {
+      "red": 123,
+      "green": 104,
+      "blue": 238
+    },
+    "hsl": {
+      "hue": 249,
+      "saturation": 80,
+      "lightness": 67
+    }
+  },
+  "MediumSpringGreen": {
+    "name": "MediumSpringGreen",
+    "hex": "#00fa9a",
+    "rgb": {
+      "red": 0,
+      "green": 250,
+      "blue": 154
+    },
+    "hsl": {
+      "hue": 157,
+      "saturation": 100,
+      "lightness": 49
+    }
+  },
+  "MediumTurquoise": {
+    "name": "MediumTurquoise",
+    "hex": "#48d1cc",
+    "rgb": {
+      "red": 72,
+      "green": 209,
+      "blue": 204
+    },
+    "hsl": {
+      "hue": 178,
+      "saturation": 60,
+      "lightness": 55
+    }
+  },
+  "MediumVioletRed": {
+    "name": "MediumVioletRed",
+    "hex": "#c71585",
+    "rgb": {
+      "red": 199,
+      "green": 21,
+      "blue": 133
+    },
+    "hsl": {
+      "hue": 322,
+      "saturation": 81,
+      "lightness": 43
+    }
+  },
+  "MidnightBlue": {
+    "name": "MidnightBlue",
+    "hex": "#191970",
+    "rgb": {
+      "red": 25,
+      "green": 25,
+      "blue": 112
+    },
+    "hsl": {
+      "hue": 240,
+      "saturation": 64,
+      "lightness": 27
+    }
+  },
+  "MintCream": {
+    "name": "MintCream",
+    "hex": "#f5fffa",
+    "rgb": {
+      "red": 245,
+      "green": 255,
+      "blue": 250
+    },
+    "hsl": {
+      "hue": 150,
+      "saturation": 100,
+      "lightness": 98
+    }
+  },
+  "MistyRose": {
+    "name": "MistyRose",
+    "hex": "#ffe4e1",
+    "rgb": {
+      "red": 255,
+      "green": 228,
+      "blue": 225
+    },
+    "hsl": {
+      "hue": 6,
+      "saturation": 100,
+      "lightness": 94
+    }
+  },
+  "Moccasin": {
+    "name": "Moccasin",
+    "hex": "#ffe4b5",
+    "rgb": {
+      "red": 255,
+      "green": 228,
+      "blue": 181
+    },
+    "hsl": {
+      "hue": 30,
+      "saturation": 100,
+      "lightness": 88
+    }
+  },
+  "NavajoWhite": {
+    "name": "NavajoWhite",
+    "hex": "#ffdead",
+    "rgb": {
+      "red": 255,
+      "green": 222,
+      "blue": 173
+    },
+    "hsl": {
+      "hue": 36,
+      "saturation": 100,
+      "lightness": 84
+    }
+  },
+  "Navy": {
+    "name": "Navy",
+    "hex": "#000080",
+    "rgb": {
+      "red": 0,
+      "green": 0,
+      "blue": 128
+    },
+    "hsl": {
+      "hue": 240,
+      "saturation": 100,
+      "lightness": 27
+    }
+  },
+  "NavyBlue": {
+    "name": "NavyBlue",
+    "hex": "#000080",
+    "rgb": {
+      "red": 0,
+      "green": 0,
+      "blue": 128
+    },
+    "hsl": {
+      "hue": 240,
+      "saturation": 100,
+      "lightness": 27
+    }
+  },
+  "OldLace": {
+    "name": "OldLace",
+    "hex": "#fdf5e6",
+    "rgb": {
+      "red": 253,
+      "green": 245,
+      "blue": 230
+    },
+    "hsl": {
+      "hue": 39,
+      "saturation": 85,
+      "lightness": 95
+    }
+  },
+  "Olive": {
+    "name": "Olive",
+    "hex": "#808000",
+    "rgb": {
+      "red": 128,
+      "green": 128,
+      "blue": 0
+    },
+    "hsl": {
+      "hue": 60,
+      "saturation": 100,
+      "lightness": 25
+    }
+  },
+  "OliveDrab": {
+    "name": "OliveDrab",
+    "hex": "#6b8e23",
+    "rgb": {
+      "red": 107,
+      "green": 142,
+      "blue": 35
+    },
+    "hsl": {
+      "hue": 80,
+      "saturation": 60,
+      "lightness": 35
+    }
+  },
+  "Orange": {
+    "name": "Orange",
+    "hex": "#ffa500",
+    "rgb": {
+      "red": 255,
+      "green": 165,
+      "blue": 0
+    },
+    "hsl": {
+      "hue": 39,
+      "saturation": 100,
+      "lightness": 50
+    }
+  },
+  "OrangeRed": {
+    "name": "OrangeRed",
+    "hex": "#ff4500",
+    "rgb": {
+      "red": 255,
+      "green": 69,
+      "blue": 0
+    },
+    "hsl": {
+      "hue": 16,
+      "saturation": 100,
+      "lightness": 50
+    }
+  },
+  "Orchid": {
+    "name": "Orchid",
+    "hex": "#da70d6",
+    "rgb": {
+      "red": 218,
+      "green": 112,
+      "blue": 214
+    },
+    "hsl": {
+      "hue": 302,
+      "saturation": 59,
+      "lightness": 65
+    }
+  },
+  "PaleGoldenRod": {
+    "name": "PaleGoldenRod",
+    "hex": "#eee8aa",
+    "rgb": {
+      "red": 238,
+      "green": 232,
+      "blue": 170
+    },
+    "hsl": {
+      "hue": 55,
+      "saturation": 67,
+      "lightness": 80
+    }
+  },
+  "PaleGreen": {
+    "name": "PaleGreen",
+    "hex": "#98fb98",
+    "rgb": {
+      "red": 152,
+      "green": 251,
+      "blue": 152
+    },
+    "hsl": {
+      "hue": 120,
+      "saturation": 93,
+      "lightness": 79
+    }
+  },
+  "PaleTurquoise": {
+    "name": "PaleTurquoise",
+    "hex": "#afeeee",
+    "rgb": {
+      "red": 175,
+      "green": 238,
+      "blue": 238
+    },
+    "hsl": {
+      "hue": 180,
+      "saturation": 65,
+      "lightness": 81
+    }
+  },
+  "PaleVioletRed": {
+    "name": "PaleVioletRed",
+    "hex": "#d87093",
+    "rgb": {
+      "red": 216,
+      "green": 112,
+      "blue": 147
+    },
+    "hsl": {
+      "hue": 340,
+      "saturation": 57,
+      "lightness": 64
+    }
+  },
+  "PapayaWhip": {
+    "name": "PapayaWhip",
+    "hex": "#ffefd5",
+    "rgb": {
+      "red": 255,
+      "green": 239,
+      "blue": 213
+    },
+    "hsl": {
+      "hue": 37,
+      "saturation": 100,
+      "lightness": 92
+    }
+  },
+  "PeachPuff": {
+    "name": "PeachPuff",
+    "hex": "#ffdab9",
+    "rgb": {
+      "red": 255,
+      "green": 218,
+      "blue": 185
+    },
+    "hsl": {
+      "hue": 28,
+      "saturation": 100,
+      "lightness": 86
+    }
+  },
+  "Peru": {
+    "name": "Peru",
+    "hex": "#cd853f",
+    "rgb": {
+      "red": 205,
+      "green": 133,
+      "blue": 63
+    },
+    "hsl": {
+      "hue": 30,
+      "saturation": 59,
+      "lightness": 53
+    }
+  },
+  "Pink": {
+    "name": "Pink",
+    "hex": "#ffc0cb",
+    "rgb": {
+      "red": 255,
+      "green": 192,
+      "blue": 203
+    },
+    "hsl": {
+      "hue": 350,
+      "saturation": 100,
+      "lightness": 88
+    }
+  },
+  "Plum": {
+    "name": "Plum",
+    "hex": "#dda0dd",
+    "rgb": {
+      "red": 221,
+      "green": 160,
+      "blue": 221
+    },
+    "hsl": {
+      "hue": 300,
+      "saturation": 47,
+      "lightness": 75
+    }
+  },
+  "PowderBlue": {
+    "name": "PowderBlue",
+    "hex": "#b0e0e6",
+    "rgb": {
+      "red": 176,
+      "green": 224,
+      "blue": 230
+    },
+    "hsl": {
+      "hue": 187,
+      "saturation": 52,
+      "lightness": 80
+    }
+  },
+  "Purple": {
+    "name": "Purple",
+    "hex": "#800080",
+    "rgb": {
+      "red": 128,
+      "green": 0,
+      "blue": 128
+    },
+    "hsl": {
+      "hue": 300,
+      "saturation": 100,
+      "lightness": 25
+    }
+  },
+  "Red": {
+    "name": "Red",
+    "hex": "#ff0000",
+    "rgb": {
+      "red": 255,
+      "green": 0,
+      "blue": 0
+    },
+    "hsl": {
+      "hue": 0,
+      "saturation": 100,
+      "lightness": 50
+    }
+  },
+  "RosyBrown": {
+    "name": "RosyBrown",
+    "hex": "#bc8f8f",
+    "rgb": {
+      "red": 188,
+      "green": 143,
+      "blue": 143
+    },
+    "hsl": {
+      "hue": 0,
+      "saturation": 25,
+      "lightness": 65
+    }
+  },
+  "RoyalBlue": {
+    "name": "RoyalBlue",
+    "hex": "#4169e1",
+    "rgb": {
+      "red": 65,
+      "green": 105,
+      "blue": 225
+    },
+    "hsl": {
+      "hue": 225,
+      "saturation": 73,
+      "lightness": 57
+    }
+  },
+  "SaddleBrown": {
+    "name": "SaddleBrown",
+    "hex": "#8b4513",
+    "rgb": {
+      "red": 139,
+      "green": 69,
+      "blue": 19
+    },
+    "hsl": {
+      "hue": 25,
+      "saturation": 76,
+      "lightness": 31
+    }
+  },
+  "Salmon": {
+    "name": "Salmon",
+    "hex": "#fa8072",
+    "rgb": {
+      "red": 250,
+      "green": 128,
+      "blue": 114
+    },
+    "hsl": {
+      "hue": 6,
+      "saturation": 93,
+      "lightness": 71
+    }
+  },
+  "SandyBrown": {
+    "name": "SandyBrown",
+    "hex": "#f4a460",
+    "rgb": {
+      "red": 244,
+      "green": 164,
+      "blue": 96
+    },
+    "hsl": {
+      "hue": 28,
+      "saturation": 87,
+      "lightness": 67
+    }
+  },
+  "SeaGreen": {
+    "name": "SeaGreen",
+    "hex": "#2e8b57",
+    "rgb": {
+      "red": 46,
+      "green": 139,
+      "blue": 87
+    },
+    "hsl": {
+      "hue": 146,
+      "saturation": 50,
+      "lightness": 36
+    }
+  },
+  "SeaShell": {
+    "name": "SeaShell",
+    "hex": "#fff5ee",
+    "rgb": {
+      "red": 255,
+      "green": 245,
+      "blue": 238
+    },
+    "hsl": {
+      "hue": 25,
+      "saturation": 100,
+      "lightness": 97
+    }
+  },
+  "Sienna": {
+    "name": "Sienna",
+    "hex": "#a0522d",
+    "rgb": {
+      "red": 160,
+      "green": 82,
+      "blue": 45
+    },
+    "hsl": {
+      "hue": 19,
+      "saturation": 56,
+      "lightness": 40
+    }
+  },
+  "Silver": {
+    "name": "Silver",
+    "hex": "#c0c0c0",
+    "rgb": {
+      "red": 192,
+      "green": 192,
+      "blue": 192
+    },
+    "hsl": {
+      "hue": 0,
+      "saturation": 0,
+      "lightness": 75
+    }
+  },
+  "SkyBlue": {
+    "name": "SkyBlue",
+    "hex": "#87ceeb",
+    "rgb": {
+      "red": 135,
+      "green": 206,
+      "blue": 235
+    },
+    "hsl": {
+      "hue": 197,
+      "saturation": 71,
+      "lightness": 73
+    }
+  },
+  "SlateBlue": {
+    "name": "SlateBlue",
+    "hex": "#6a5acd",
+    "rgb": {
+      "red": 106,
+      "green": 90,
+      "blue": 205
+    },
+    "hsl": {
+      "hue": 248,
+      "saturation": 53,
+      "lightness": 58
+    }
+  },
+  "SlateGray": {
+    "name": "SlateGray",
+    "hex": "#708090",
+    "rgb": {
+      "red": 112,
+      "green": 128,
+      "blue": 144
+    },
+    "hsl": {
+      "hue": 210,
+      "saturation": 13,
+      "lightness": 50
+    }
+  },
+  "SlateGrey": {
+    "name": "SlateGrey",
+    "hex": "#708090",
+    "rgb": {
+      "red": 112,
+      "green": 128,
+      "blue": 144
+    },
+    "hsl": {
+      "hue": 210,
+      "saturation": 13,
+      "lightness": 50
+    }
+  },
+  "Snow": {
+    "name": "Snow",
+    "hex": "#fffafa",
+    "rgb": {
+      "red": 255,
+      "green": 250,
+      "blue": 250
+    },
+    "hsl": {
+      "hue": 0,
+      "saturation": 100,
+      "lightness": 99
+    }
+  },
+  "SpringGreen": {
+    "name": "SpringGreen",
+    "hex": "#00ff7f",
+    "rgb": {
+      "red": 0,
+      "green": 255,
+      "blue": 127
+    },
+    "hsl": {
+      "hue": 150,
+      "saturation": 100,
+      "lightness": 50
+    }
+  },
+  "SteelBlue": {
+    "name": "SteelBlue",
+    "hex": "#4682b4",
+    "rgb": {
+      "red": 70,
+      "green": 130,
+      "blue": 180
+    },
+    "hsl": {
+      "hue": 207,
+      "saturation": 44,
+      "lightness": 49
+    }
+  },
+  "Tan": {
+    "name": "Tan",
+    "hex": "#d2b48c",
+    "rgb": {
+      "red": 210,
+      "green": 180,
+      "blue": 140
+    },
+    "hsl": {
+      "hue": 34,
+      "saturation": 44,
+      "lightness": 69
+    }
+  },
+  "Teal": {
+    "name": "Teal",
+    "hex": "#008080",
+    "rgb": {
+      "red": 0,
+      "green": 128,
+      "blue": 128
+    },
+    "hsl": {
+      "hue": 180,
+      "saturation": 100,
+      "lightness": 25
+    }
+  },
+  "Thistle": {
+    "name": "Thistle",
+    "hex": "#d8bfd8",
+    "rgb": {
+      "red": 216,
+      "green": 191,
+      "blue": 216
+    },
+    "hsl": {
+      "hue": 300,
+      "saturation": 24,
+      "lightness": 80
+    }
+  },
+  "Tomato": {
+    "name": "Tomato",
+    "hex": "#ff6347",
+    "rgb": {
+      "red": 255,
+      "green": 99,
+      "blue": 71
+    },
+    "hsl": {
+      "hue": 9,
+      "saturation": 100,
+      "lightness": 64
+    }
+  },
+  "Turquoise": {
+    "name": "Turquoise",
+    "hex": "#40e0d0",
+    "rgb": {
+      "red": 64,
+      "green": 224,
+      "blue": 208
+    },
+    "hsl": {
+      "hue": 174,
+      "saturation": 72,
+      "lightness": 56
+    }
+  },
+  "Violet": {
+    "name": "Violet",
+    "hex": "#ee82ee",
+    "rgb": {
+      "red": 238,
+      "green": 130,
+      "blue": 238
+    },
+    "hsl": {
+      "hue": 300,
+      "saturation": 76,
+      "lightness": 72
+    }
+  },
+  "Wheat": {
+    "name": "Wheat",
+    "hex": "#f5deb3",
+    "rgb": {
+      "red": 245,
+      "green": 222,
+      "blue": 179
+    },
+    "hsl": {
+      "hue": 39,
+      "saturation": 77,
+      "lightness": 83
+    }
+  },
+  "White": {
+    "name": "White",
+    "hex": "#ffffff",
+    "rgb": {
+      "red": 255,
+      "green": 255,
+      "blue": 255
+    },
+    "hsl": {
+      "hue": 0,
+      "saturation": 0,
+      "lightness": 100
+    }
+  },
+  "WhiteSmoke": {
+    "name": "WhiteSmoke",
+    "hex": "#f5f5f5",
+    "rgb": {
+      "red": 245,
+      "green": 245,
+      "blue": 245
+    },
+    "hsl": {
+      "hue": 0,
+      "saturation": 0,
+      "lightness": 96
+    }
+  },
+  "Yellow": {
+    "name": "Yellow",
+    "hex": "#ffff00",
+    "rgb": {
+      "red": 255,
+      "green": 255,
+      "blue": 0
+    },
+    "hsl": {
+      "hue": 60,
+      "saturation": 100,
+      "lightness": 50
+    }
+  },
+  "YellowGreen": {
+    "name": "YellowGreen",
+    "hex": "#9acd32",
+    "rgb": {
+      "red": 154,
+      "green": 205,
+      "blue": 50
+    },
+    "hsl": {
+      "hue": 80,
+      "saturation": 60,
+      "lightness": 50
+    }
+  }
+}

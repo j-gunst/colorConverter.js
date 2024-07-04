@@ -1,7 +1,9 @@
 {
   "compilerOptions": {
     "target": "es2020",
-    "module": "ESNext",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "resolveJsonModule": true,
     "declaration": true,
     "outDir": "./dist/esm",
     "strict": true,
