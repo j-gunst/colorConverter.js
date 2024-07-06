@@ -1,7 +1,7 @@
 {
   "name": "@nawael/color-converter.js",
   "version": "1.0.1",
-  "description": "Some utilities to convert CSS color to RGB, HEX and HSL",
+  "description": "Some utilities to convert any CSS color to RGB, HEX and HSL",
   "keywords": [
     "color",
     "rgb",

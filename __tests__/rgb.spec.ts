@@ -44,6 +44,7 @@ describe('rgbToHex with valid cases', () => {
     ${'rgba(50%, 20%, 10% / 50%)'}    | ${'#80331a80'}
     ${'rgba(50% , 20% , 10% / 50%)'}  | ${'#80331a80'}
     ${'rgba(50% 20% 10% / 0.5)'}      | ${'#80331a80'}
+    ${'rgba(50%, 20%, 10% / 0.5)'}    | ${'#80331a80'}
     ${'rgba(50%, 20%, 10%, 100/2)'}   | ${'#80331a80'}
     ${'rgba(50%, 20%, 10%, 100 / 2)'} | ${'#80331a80'}
   `(`With "$arg" returns "$expected"`, ({ arg, expected }) => expect(rgbToHex(arg)).toBe(expected))
