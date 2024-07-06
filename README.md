@@ -9,6 +9,8 @@ Some utilities to convert any CSS color to RGB, HEX and HSL
 ![NPM Version](https://img.shields.io/npm/v/%40nawael%2Fcolor-converter.js)
 ![npm bundle size](https://img.shields.io/bundlephobia/min/%40nawael%2Fcolor-converter.js)
 
+![Banner](https://raw.githubusercontent.com/nwl-x/colorConverter.js/main/banner.webp)
+
 ## Installation
 
 #### With [npm](https://www.npmjs.com/)
