@@ -30,13 +30,13 @@ yarn add @nawael/color-converter.js --save
 #### For [CommonJS](https://nodejs.org/docs/latest/api/modules.html#modules-commonjs-modules)
 
 ```js
-const { rgbToHex, ... = require('@nawael/color-converter.js')
+const { rgbToHex, ...} = require('@nawael/color-converter.js')
 ```
 
 #### For [ESM](https://nodejs.org/api/esm.html#esm_ecmascript_modules)
 
 ```js
-import { rgbToHex, ... from '@nawael/color-converter.js'
+import { rgbToHex, ... } from '@nawael/color-converter.js'
 ```
 
 ## Usage examples
