@@ -1,26 +1,30 @@
 import { rgbToHex, rgbToHsl } from '../src/index'
+import { HEX_DEFAULT_STRING, HSL_DEFAULT_STRING } from '../src/utils/constants'
 
-describe('rgbToHex with invalid cases', () => {
+describe('rgbTo(hex|hsl) with invalid cases', () => {
   test.each`
-    arg                            | expected
-    ${null}                        | ${'#ffffff'}
-    ${false}                       | ${'#ffffff'}
-    ${undefined}                   | ${'#ffffff'}
-    ${'string'}                    | ${'#ffffff'}
-    ${''}                          | ${'#ffffff'}
-    ${12345}                       | ${'#ffffff'}
-    ${-12345}                      | ${'#ffffff'}
-    ${Infinity}                    | ${'#ffffff'}
-    ${-Infinity}                   | ${'#ffffff'}
-    ${NaN}                         | ${'#ffffff'}
-    ${{}}                          | ${'#ffffff'}
-    ${[]}                          | ${'#ffffff'}
-    ${'rgba(10, 20, 30, 1000%)'}   | ${'#ffffff'}
-    ${'rgba(50%, 20%, 10%, 0.5%)'} | ${'#ffffff'}
-  `(`With "$arg" returns "$expected"`, ({ arg, expected }) => expect(rgbToHex(arg)).toBe(expected))
+    arg
+    ${null}
+    ${false}
+    ${undefined}
+    ${'string'}
+    ${''}
+    ${12345}
+    ${-12345}
+    ${Infinity}
+    ${-Infinity}
+    ${NaN}
+    ${{}}
+    ${[]}
+    ${'rgba(10, 20, 30, 1000%)'}
+    ${'rgba(50%, 20%, 10%, 0.5%)'}
+  `(`With "$arg"`, ({ arg }) => {
+    expect(rgbToHex(arg)).toBe(HEX_DEFAULT_STRING)
+    expect(rgbToHsl(arg)).toBe(HSL_DEFAULT_STRING)
+  })
 })
 
-describe('rgbToHex with valid cases', () => {
+describe('rgbToHex', () => {
   test.each`
     arg                               | expected
     ${'rgb(50 40 30)'}                | ${'#32281e'}
@@ -50,26 +54,7 @@ describe('rgbToHex with valid cases', () => {
   `(`With "$arg" returns "$expected"`, ({ arg, expected }) => expect(rgbToHex(arg)).toBe(expected))
 })
 
-describe('rgbToHsl with invalid cases', () => {
-  test.each`
-    arg          | expected
-    ${null}      | ${'hsl(0, 0%, 100%)'}
-    ${false}     | ${'hsl(0, 0%, 100%)'}
-    ${undefined} | ${'hsl(0, 0%, 100%)'}
-    ${'string'}  | ${'hsl(0, 0%, 100%)'}
-    ${''}        | ${'hsl(0, 0%, 100%)'}
-    ${12345}     | ${'hsl(0, 0%, 100%)'}
-    ${-12345}    | ${'hsl(0, 0%, 100%)'}
-    ${Infinity}  | ${'hsl(0, 0%, 100%)'}
-    ${-Infinity} | ${'hsl(0, 0%, 100%)'}
-    ${NaN}       | ${'hsl(0, 0%, 100%)'}
-    ${{}}        | ${'hsl(0, 0%, 100%)'}
-    ${[]}        | ${'hsl(0, 0%, 100%)'}
-    ${'#ffffff'} | ${'hsl(0, 0%, 100%)'}
-  `(`With "$arg" returns $expected`, ({ arg, expected }) => expect(rgbToHsl(arg)).toBe(expected))
-})
-
-describe('rgbToHsl with valid cases', () => {
+describe('rgbToHsl', () => {
   test.each`
     arg                               | expected
     ${'rgb(50 40 30)'}                | ${'hsl(30, 25%, 16%)'}

@@ -1,17 +1,22 @@
 export type RgbValues = {
-  r: string
-  g: string
-  b: string
-  a?: string
+  red: string
+  green: string
+  blue: string
+  alpha?: string
 }
 
-export type HexValues = RgbValues
+export type HexValues = {
+  red: string
+  green: string
+  blue: string
+  alpha?: string
+}
 
 export type HlsValues = {
-  h: string
-  s: string
-  l: string
-  a?: string
+  hue: string
+  saturation: string
+  lightness: string
+  alpha?: string
 }
 
 export type NamedColor = {

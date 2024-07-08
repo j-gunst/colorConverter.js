@@ -1,27 +1,33 @@
 import { colorToRgb, colorToHex, colorToHsl } from '../src/index'
+import { RGB_DEFAULT_STRING, HEX_DEFAULT_STRING, HSL_DEFAULT_STRING } from '../src/utils/constants'
 
-describe('colorToRgb with invalid cases', () => {
+describe('colorTo(Rgb|Hex|Hsl) with invalid cases', () => {
   test.each`
-    arg          | expected
-    ${null}      | ${'rgb(255, 255, 255)'}
-    ${false}     | ${'rgb(255, 255, 255)'}
-    ${undefined} | ${'rgb(255, 255, 255)'}
-    ${'string'}  | ${'rgb(255, 255, 255)'}
-    ${''}        | ${'rgb(255, 255, 255)'}
-    ${12345}     | ${'rgb(255, 255, 255)'}
-    ${-12345}    | ${'rgb(255, 255, 255)'}
-    ${Infinity}  | ${'rgb(255, 255, 255)'}
-    ${-Infinity} | ${'rgb(255, 255, 255)'}
-    ${NaN}       | ${'rgb(255, 255, 255)'}
-    ${{}}        | ${'rgb(255, 255, 255)'}
-    ${[]}        | ${'rgb(255, 255, 255)'}
-    ${'plop'}    | ${'rgb(255, 255, 255)'}
-  `(`With "$arg" returns "$expected"`, ({ arg, expected }) => expect(colorToRgb(arg)).toBe(expected))
+    arg
+    ${null}
+    ${false}
+    ${undefined}
+    ${'string'}
+    ${''}
+    ${12345}
+    ${-12345}
+    ${Infinity}
+    ${-Infinity}
+    ${NaN}
+    ${{}}
+    ${[]}
+    ${'plop'}
+  `(`With "$arg"`, ({ arg }) => {
+    expect(colorToRgb(arg)).toBe(RGB_DEFAULT_STRING)
+    expect(colorToHex(arg)).toBe(HEX_DEFAULT_STRING)
+    expect(colorToHsl(arg)).toBe(HSL_DEFAULT_STRING)
+  })
 })
 
-describe('colorToRgb with valid cases', () => {
+describe('colorToRgb', () => {
   test.each`
     arg              | expected                      | percent
+    ${'plop'}        | ${'rgb(255, 255, 255)'}       | ${false}
     ${'BlueViolet'}  | ${'rgb(138, 43, 226)'}        | ${false}
     ${'BLUEVIOLET'}  | ${'rgb(138, 43, 226)'}        | ${false}
     ${'AliceBlue'}   | ${'rgb(240, 248, 255)'}       | ${false}
@@ -29,28 +35,10 @@ describe('colorToRgb with valid cases', () => {
   `(`With "$arg" returns "$expected"`, ({ arg, expected, percent }) => expect(colorToRgb(arg, percent)).toBe(expected))
 })
 
-describe('colorToHex with invalid cases', () => {
-  test.each`
-    arg          | expected
-    ${null}      | ${'#ffffff'}
-    ${false}     | ${'#ffffff'}
-    ${undefined} | ${'#ffffff'}
-    ${'string'}  | ${'#ffffff'}
-    ${''}        | ${'#ffffff'}
-    ${12345}     | ${'#ffffff'}
-    ${-12345}    | ${'#ffffff'}
-    ${Infinity}  | ${'#ffffff'}
-    ${-Infinity} | ${'#ffffff'}
-    ${NaN}       | ${'#ffffff'}
-    ${{}}        | ${'#ffffff'}
-    ${[]}        | ${'#ffffff'}
-    ${'plop'}    | ${'#ffffff'}
-  `(`With "$arg" returns "$expected"`, ({ arg, expected }) => expect(colorToHex(arg)).toBe(expected))
-})
-
-describe('colorToHex with valid cases', () => {
+describe('colorToHex', () => {
   test.each`
     arg              | expected
+    ${'plop'}        | ${'#ffffff'}
     ${'BlueViolet'}  | ${'#8a2be2'}
     ${'blueviolet'}  | ${'#8a2be2'}
     ${'AliceBlue'}   | ${'#f0f8ff'}
@@ -58,28 +46,10 @@ describe('colorToHex with valid cases', () => {
   `(`With "$arg" returns "$expected"`, ({ arg, expected }) => expect(colorToHex(arg)).toBe(expected))
 })
 
-describe('colorToHsl with invalid cases', () => {
-  test.each`
-    arg          | expected
-    ${null}      | ${'hsl(0, 0%, 100%)'}
-    ${false}     | ${'hsl(0, 0%, 100%)'}
-    ${undefined} | ${'hsl(0, 0%, 100%)'}
-    ${'string'}  | ${'hsl(0, 0%, 100%)'}
-    ${''}        | ${'hsl(0, 0%, 100%)'}
-    ${12345}     | ${'hsl(0, 0%, 100%)'}
-    ${-12345}    | ${'hsl(0, 0%, 100%)'}
-    ${Infinity}  | ${'hsl(0, 0%, 100%)'}
-    ${-Infinity} | ${'hsl(0, 0%, 100%)'}
-    ${NaN}       | ${'hsl(0, 0%, 100%)'}
-    ${{}}        | ${'hsl(0, 0%, 100%)'}
-    ${[]}        | ${'hsl(0, 0%, 100%)'}
-    ${'plop'}    | ${'hsl(0, 0%, 100%)'}
-  `(`With "$arg" returns "$expected"`, ({ arg, expected }) => expect(colorToHsl(arg)).toBe(expected))
-})
-
-describe('colorToHsl with valid cases', () => {
+describe('colorToHsl', () => {
   test.each`
     arg              | expected
+    ${'plop'}        | ${'hsl(0, 0%, 100%)'}
     ${'BlueViolet'}  | ${'hsl(271, 76%, 53%)'}
     ${'blueviolet'}  | ${'hsl(271, 76%, 53%)'}
     ${'AliceBlue'}   | ${'hsl(208, 100%, 97%)'}
