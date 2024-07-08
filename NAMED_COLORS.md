@@ -1,7 +1,7 @@
 ## List of Named Colors fullfilling the [CSS Color Module Level 4 specifications](https://www.w3.org/TR/css-color-4/#color-keywords)
 
 Generated from [this free JSON file](https://github.com/w3c/csswg-drafts/blob/master/css-color/named-colors.json).
-
+`#faebd7`
 <section class="content"></section>
 
 <style>
