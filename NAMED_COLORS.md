@@ -22,7 +22,7 @@ Generated from [this free JSON file](https://github.com/w3c/csswg-drafts/blob/ma
     </tr>
   </thead>
   <tbody><tr style="color: #000000">
-      <td class="select" style="background-color:AliceBlue">AliceBlue</td>
+      <td class="select" style="background-color:AliceBlue">AliceBlue `#faebd7`</td>
       <td class="select" style="background-color:#f0f8ff">#f0f8ff</td>
       <td class="select" style="background-color:rgb(240, 248, 255)">rgb(240, 248, 255)</td>
       <td class="select" style="background-color:hsl(208, 100%, 97%)">hsl(208, 100%, 97%)</td>
