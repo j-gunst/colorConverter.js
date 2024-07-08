@@ -9,7 +9,10 @@
     "strict": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "noImplicitAny": true,
+    "removeComments": false,
+    "noLib": false
   },
   "include": ["src/**/*", "__tests__/*"],
   "exclude": ["node_modules", "**/__tests__/*"]

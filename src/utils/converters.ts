@@ -3,13 +3,19 @@ import { processRgbAlpha, processRgbChannel, processHslAlpha, processHslChannel 
 
 import type { HexValues, RgbValues, HlsValues } from '../type'
 
+// TODO add tests converters.spec.ts
+
 const hexDefaultValues: HexValues = { r: 'ff', g: 'ff', b: 'ff' }
 const rgbDefaultValues: RgbValues = { r: '255', g: '255', b: '255' }
 const hslDefaultValues: HlsValues = { h: '0', s: '0', l: '100' }
 
 // ==== RGB(A) ====
 
-// TODO add tests converters.spec.ts
+/**
+ *
+ * @param arg
+ * @returns
+ */
 export const convertRgbToHex = (arg: string): HexValues => {
   if (!isRgbColor(arg)) {
     return hexDefaultValues
@@ -36,7 +42,11 @@ export const convertRgbToHex = (arg: string): HexValues => {
   return output
 }
 
-// TODO add tests converters.spec.ts
+/**
+ *
+ * @param arg
+ * @returns
+ */
 export const convertRgbToHls = (arg: string): HlsValues => {
   if (!isRgbColor(arg)) {
     return hslDefaultValues
@@ -105,7 +115,12 @@ export const convertRgbToHls = (arg: string): HlsValues => {
 
 // ==== HEX(A) ====
 
-// TODO add tests converters.spec.ts
+/**
+ *
+ * @param arg
+ * @param percent
+ * @returns
+ */
 export const convertHexToRgb = (arg: string, percent = false) => {
   if (!isHexColor(arg)) {
     return rgbDefaultValues
@@ -146,7 +161,11 @@ export const convertHexToRgb = (arg: string, percent = false) => {
   return output
 }
 
-// TODO add tests converters.spec.ts
+/**
+ *
+ * @param arg
+ * @returns
+ */
 export const convertHexToHls = (arg: string) => {
   // Convert hex to RGB first
   const { r, g, b, a }: HexValues = convertHexToRgb(arg)
@@ -157,7 +176,11 @@ export const convertHexToHls = (arg: string) => {
 
 // ==== HSL ====
 
-// TODO add tests converters.spec.ts
+/**
+ *
+ * @param arg
+ * @returns
+ */
 export const convertHslToRgb = (arg: string) => {
   if (!isHslColor(arg)) {
     return rgbDefaultValues
@@ -251,7 +274,11 @@ export const convertHslToRgb = (arg: string) => {
   return output
 }
 
-// TODO add tests converters.spec.ts
+/**
+ *
+ * @param arg
+ * @returns
+ */
 export const convertHslToHex = (arg: string) => {
   // Convert hsl to rgb first
   const { r, g, b, a } = convertHslToRgb(arg)
@@ -262,7 +289,12 @@ export const convertHslToHex = (arg: string) => {
 
 // ==== Named Color ====
 
-// TODO add tests converters.spec.ts
+/**
+ *
+ * @param arg
+ * @param percent
+ * @returns
+ */
 export const convertcolorToRgb = (arg: string, percent = false): RgbValues => {
   if (!isNamedColor(arg)) {
     return rgbDefaultValues
@@ -287,7 +319,11 @@ export const convertcolorToRgb = (arg: string, percent = false): RgbValues => {
   return { r: red.toString(), g: green.toString(), b: blue.toString() }
 }
 
-// TODO add tests converters.spec.ts
+/**
+ *
+ * @param arg
+ * @returns
+ */
 export const convertcolorToHex = (arg: string): HexValues => {
   if (!isNamedColor(arg)) {
     return hexDefaultValues
@@ -308,7 +344,11 @@ export const convertcolorToHex = (arg: string): HexValues => {
   return { r: red, g: green, b: blue }
 }
 
-// TODO add tests converters.spec.ts
+/**
+ *
+ * @param arg
+ * @returns
+ */
 export const convertcolorToHsl = (arg: string): HlsValues => {
   if (!isNamedColor(arg)) {
     return hslDefaultValues
