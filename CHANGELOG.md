@@ -1,5 +1,11 @@
 # @nawael/color-converter.js
 
+## 1.2.1
+
+### Patch Changes
+
+- 3cea1eb: Import types
+
 ## 1.2.0
 
 ### Minor Changes
