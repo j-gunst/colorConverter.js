@@ -37,3 +37,13 @@ export type NamedColor = {
 export type NamedColors = {
   [key: string]: NamedColor
 }
+
+export declare const rgbToHex: (arg: string) => string
+export declare const rgbToHsl: (arg: string) => string
+export declare const hexToRgb: (arg: string, percent?: boolean) => string
+export declare const hexToHsl: (arg: string) => string
+export declare const hslToRgb: (arg: string, percent?: boolean) => string
+export declare const hslToHex: (arg: string) => string
+export declare const colorToRgb: (arg: string, percent?: boolean) => string
+export declare const colorToHex: (arg: string) => string
+export declare const colorToHsl: (arg: string) => string
