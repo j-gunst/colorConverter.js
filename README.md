@@ -13,13 +13,13 @@ Some utilities to convert any CSS color to RGB, HEX and HSL
 
 ## Installation
 
-#### With [npm](https://www.npmjs.com/)
+### With [npm](https://www.npmjs.com/)
 
 ```bash
 npm install @nawael/color-converter.js --save
 ```
 
-#### With [yarn](https://yarnpkg.com/)
+### With [yarn](https://yarnpkg.com/)
 
 ```bash
 yarn add @nawael/color-converter.js --save
@@ -27,13 +27,13 @@ yarn add @nawael/color-converter.js --save
 
 ## Integration
 
-#### For [CommonJS](https://nodejs.org/docs/latest/api/modules.html#modules-commonjs-modules)
+### For [CommonJS](https://nodejs.org/docs/latest/api/modules.html#modules-commonjs-modules)
 
 ```js
 const { rgbToHex, ...} = require('@nawael/color-converter.js')
 ```
 
-#### For [ESM](https://nodejs.org/api/esm.html#esm_ecmascript_modules)
+### For [ESM](https://nodejs.org/api/esm.html#esm_ecmascript_modules)
 
 ```js
 import { rgbToHex, ... } from '@nawael/color-converter.js'
@@ -41,69 +41,58 @@ import { rgbToHex, ... } from '@nawael/color-converter.js'
 
 ## Usage examples
 
-#### Turn RGB color to HEX
+### Turn RGB color to HEX
 
 ```js
 rgbToHex('rgb(255, 0, 0)') // returns #ff0000
 ```
 
-#### Turn HSL color to RGB
+### Turn HSL color to RGB
 
 ```js
 hslToRgb('hsl(0, 0, 0') // returns rgb(255, 0, 0)
 ```
 
-#### Turn Named color to HSL
+### Turn Named color to HSL
 
 ```js
-colorToRgb('CornflowerBlue') // returns hsl(219, 79%, 66%)
+colorToHsl('CornflowerBlue') // returns hsl(219, 79%, 66%)
 ```
 
 and so on...
 
 ## Available APIs
 
-| RGB color         | Description              | HEX color         | Description              | HSL color         | Description              | APIs         | Description        |
-| ----------------- | ------------------------ | ----------------- | ------------------------ | ----------------- | ------------------------ | ------------ | ------------------ |
-| rgbToHex()        | RGB color to HEX         | hexToRgb()        | HEX color to RGB         | hslToRgb()        | HSl color to RGB         | colorToRgb() | Named color to rgb |
-| rgbToHsl()        | RGB color to HSL         | hexToHsl()        | HEX color to HSL         | hslToHex()        | HSl color to HEX         | colorToHex() | Named color to hex |
-| rgbToNamedColor() | RGB color to Named color | hexToNamedColor() | HEX color to Named color | hslToNamedColor() | HSl color to Named color | colorToHsl() | Named color to hsl |
+| RGB color | HEX color | HSL color | Named color |
+| --------- | --------- | --------- | ----------- |
+| rgbToHex  | hexToRgb  | hslToRgb  | colorToRgb  |
+| rgbToHsl  | hexToHsl  | hslToHex  | colorToHex  |
+|           |           |           | colorToHsl  |
 
-#### 👍 Available color CSS parameter
+## Availables APIs parameter
 
-| RBG color syntax          | HEX color syntax | HSL color syntax            | CSS color name                                                                                                  |
-| ------------------------- | ---------------- | --------------------------- | --------------------------------------------------------------------------------------------------------------- |
-| rgb(50, 40, 30)           | #ff0000          | hsl('0', 10%, 33%)          | [Any valid CSS color name](https://raw.githubusercontent.com/nwl-x/colorConverter.js/main/src/namedColors.json) |
-| rgb(50% , 40% , 30%)      | #ff000080        | hsla('120', 100%, 25%, 0.3) |                                                                                                                 |
-| rgba(50%, 20%, 10%, 0.5)  |                  |                             |                                                                                                                 |
-| rgba(50%, 20%, 10%, 50%)  |                  |                             |                                                                                                                 |
-| rgba(50%, 20%, 10% / 50%) |                  |                             |                                                                                                                 |
+| RBG color syntax          | HEX color syntax | HSL color syntax             | CSS color name                              |
+| ------------------------- | ---------------- | ---------------------------- | ------------------------------------------- |
+| rgb(50, 40, 30)           | #fa1             | hsl(120, 10%, 25%)           | [Any valid CSS color name](NAMED_COLORS.md) |
+| rgba(50%, 40%, 30%, 0.5)  | #fa18            | hsla(120, 10%, 25%, 0.3)     |                                             |
+| rgba(50%, 40%, 30%, 50%)  | #ffaa11          | hsla(120, 10%, 25%, .3)      |                                             |
+| rgba(50%, 40%, 30% / 50%) | #ffaa1188        | hsla(120deg, 10%, 25%, 0.3)  |                                             |
+| rgb(50% 40% 30%)          |                  | hsla(120rad, 10%, 25%, 0.3)  |                                             |
+| rgb(50 40 30)             |                  | hsla(120turn, 10%, 25%, 0.3) |                                             |
+| rgba(50% 20% 10% / 0.5)   |                  |                              |                                             |
 
-#### 👎 unavailable color CSS parameter but still works
+> [!NOTE]
+> All exotic color CSS parameter are supported
+>
+> - rgba(50% 20% 10% 0.5)
+> - rgba(50% 20% 10% 50%)
+> - rgba(50%,20%,10%/50%)
+> - rgba(50%, 20%, 10%, 100/2)
+> - hsl(120, 25%)
 
-| RBG color syntax             | HEX color syntax | HSL color syntax          | CSS color name |
-| ---------------------------- | ---------------- | ------------------------- | -------------- |
-| rgb(50 40 30)                | #ff0000          | hsl(0, 10%, 33%)          | cornflowerblue |
-| rgb(50,40,30)                | #ff000080        | hsla(120, 100%, 25%, 0.3) |                |
-| rgb(50 , 40 , 30)            |                  | hsl(120, 25%)             |                |
-| rgb(50% 40% 30%)             |                  |                           |                |
-| rgb(50%,40%,30%)             |                  |                           |                |
-| rgb(50%, 40%, 30%)           |                  |                           |                |
-| rgba(50% 20% 10% 0.5)        |                  |                           |                |
-| rgba(50%,20%,10%,0.5)        |                  |                           |                |
-| rgba(50% , 20% , 10% , 0.5)  |                  |                           |                |
-| rgba(50% 20% 10% 50%)        |                  |                           |                |
-| rgba(50%,20%,10%,50%)        |                  |                           |                |
-| rgba(50% , 20% , 10% , 50%)  |                  |                           |                |
-| rgba(50% 20% 10% / 50%)      |                  |                           |                |
-| rgba(50%,20%,10%/50%)        |                  |                           |                |
-| rgba(50% , 20% , 10% / 50%)  |                  |                           |                |
-| rgba(50% 20% 10% / 0.5)      |                  |                           |                |
-| rgba(50%, 20%, 10%, 100/2)   |                  |                           |                |
-| rgba(50%, 20%, 10%, 100 / 2) |                  |                           |                |
-
-#### 📢 All malformed color CSS parameter will return white color per default
-
-- #ffffff
-- rgb(255, 255, 255)
-- hsl(0, 0%, 100%)
+> [!IMPORTANT]
+> All invalides color CSS parameter will return white color per default
+>
+> - #ffffff
+> - rgb(255, 255, 255)
+> - hsl(0, 0%, 100%)
