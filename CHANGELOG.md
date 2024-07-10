@@ -1,5 +1,11 @@
 # @nawael/color-converter.js
 
+## 1.2.0
+
+### Minor Changes
+
+- 96fe644: Add method to convert deg, rad and turn
+
 ## 1.1.0
 
 ### Minor Changes
