@@ -1,5 +1,11 @@
 # @nawael/color-converter.js
 
+## 1.2.2
+
+### Patch Changes
+
+- f955b44: TailwindCSS compatibility
+
 ## 1.2.1
 
 ### Patch Changes
