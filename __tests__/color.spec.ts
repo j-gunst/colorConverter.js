@@ -26,12 +26,12 @@ describe('colorTo(Rgb|Hex|Hsl) with invalid cases', () => {
 
 describe('colorToRgb', () => {
   test.each`
-    arg              | expected                      | percent
-    ${'plop'}        | ${'rgb(255, 255, 255)'}       | ${false}
-    ${'BlueViolet'}  | ${'rgb(138, 43, 226)'}        | ${false}
-    ${'BLUEVIOLET'}  | ${'rgb(138, 43, 226)'}        | ${false}
-    ${'AliceBlue'}   | ${'rgb(240, 248, 255)'}       | ${false}
-    ${'YellowGreen'} | ${'rgb(60.4%, 80.4%, 19.6%)'} | ${true}
+    arg              | expected                    | percent
+    ${'plop'}        | ${'rgb(255,255,255)'}       | ${false}
+    ${'BlueViolet'}  | ${'rgb(138,43,226)'}        | ${false}
+    ${'BLUEVIOLET'}  | ${'rgb(138,43,226)'}        | ${false}
+    ${'AliceBlue'}   | ${'rgb(240,248,255)'}       | ${false}
+    ${'YellowGreen'} | ${'rgb(60.4%,80.4%,19.6%)'} | ${true}
   `(`With "$arg" returns "$expected"`, ({ arg, expected, percent }) => expect(colorToRgb(arg, percent)).toBe(expected))
 })
 
@@ -49,10 +49,10 @@ describe('colorToHex', () => {
 describe('colorToHsl', () => {
   test.each`
     arg              | expected
-    ${'plop'}        | ${'hsl(0, 0%, 100%)'}
-    ${'BlueViolet'}  | ${'hsl(271, 76%, 53%)'}
-    ${'blueviolet'}  | ${'hsl(271, 76%, 53%)'}
-    ${'AliceBlue'}   | ${'hsl(208, 100%, 97%)'}
-    ${'YellowGreen'} | ${'hsl(80, 60%, 50%)'}
+    ${'plop'}        | ${'hsl(0,0%,100%)'}
+    ${'BlueViolet'}  | ${'hsl(271,76%,53%)'}
+    ${'blueviolet'}  | ${'hsl(271,76%,53%)'}
+    ${'AliceBlue'}   | ${'hsl(208,100%,97%)'}
+    ${'YellowGreen'} | ${'hsl(80,60%,50%)'}
   `(`With "$arg" returns "$expected"`, ({ arg, expected }) => expect(colorToHsl(arg)).toBe(expected))
 })

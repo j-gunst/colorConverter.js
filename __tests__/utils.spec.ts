@@ -183,12 +183,12 @@ describe('hexToString', () => {
 describe('rgbToString', () => {
   test.each`
     arg                                                            | expected
-    ${{ red: '50', green: '40', blue: '30', alpha: undefined }}    | ${'rgb(50, 40, 30)'}
-    ${{ red: '50%', green: '40%', blue: '30%', alpha: undefined }} | ${'rgb(50%, 40%, 30%)'}
-    ${{ red: '50%', green: '20%', blue: '10%', alpha: '0.5' }}     | ${'rgba(50%, 20%, 10%, 0.5)'}
-    ${{ red: '50%', green: '20%', blue: '10%', alpha: '50%' }}     | ${'rgba(50%, 20%, 10%, 50%)'}
-    ${{ red: '50%', green: '20%', blue: '10%', alpha: '100/2' }}   | ${'rgba(50%, 20%, 10%, 100/2)'}
-    ${{ red: '50%', green: '20%', blue: '10%', alpha: '100 / 2' }} | ${'rgba(50%, 20%, 10%, 100 / 2)'}
+    ${{ red: '50', green: '40', blue: '30', alpha: undefined }}    | ${'rgb(50,40,30)'}
+    ${{ red: '50%', green: '40%', blue: '30%', alpha: undefined }} | ${'rgb(50%,40%,30%)'}
+    ${{ red: '50%', green: '20%', blue: '10%', alpha: '0.5' }}     | ${'rgba(50%,20%,10%,0.5)'}
+    ${{ red: '50%', green: '20%', blue: '10%', alpha: '50%' }}     | ${'rgba(50%,20%,10%,50%)'}
+    ${{ red: '50%', green: '20%', blue: '10%', alpha: '100/2' }}   | ${'rgba(50%,20%,10%,100/2)'}
+    ${{ red: '50%', green: '20%', blue: '10%', alpha: '100 / 2' }} | ${'rgba(50%,20%,10%,100 / 2)'}
   `(`With "$arg" returns "$expected"`, ({ arg, expected }) => {
     expect(rgbToString(arg)).toEqual(expected)
   })
@@ -197,10 +197,10 @@ describe('rgbToString', () => {
 describe('hslToString', () => {
   test.each`
     arg                                                                   | expected
-    ${{ hue: '0', saturation: '10', lightness: '33', alpha: undefined }}  | ${'hsl(0, 10%, 33%)'}
-    ${{ hue: '0', saturation: '100', lightness: '50', alpha: undefined }} | ${'hsl(0, 100%, 50%)'}
-    ${{ hue: '120', saturation: '100', lightness: '25', alpha: '0.3' }}   | ${'hsla(120, 100%, 25%, 0.3%)'}
-    ${{ hue: '120', saturation: '2', lightness: '5', alpha: undefined }}  | ${'hsl(120, 2%, 5%)'}
+    ${{ hue: '0', saturation: '10', lightness: '33', alpha: undefined }}  | ${'hsl(0,10%,33%)'}
+    ${{ hue: '0', saturation: '100', lightness: '50', alpha: undefined }} | ${'hsl(0,100%,50%)'}
+    ${{ hue: '120', saturation: '100', lightness: '25', alpha: '0.3' }}   | ${'hsla(120,100%,25%,0.3%)'}
+    ${{ hue: '120', saturation: '2', lightness: '5', alpha: undefined }}  | ${'hsl(120,2%,5%)'}
   `(`With "$arg" returns "$expected"`, ({ arg, expected }) => {
     expect(hslToString(arg)).toEqual(expected)
   })
