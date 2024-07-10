@@ -150,14 +150,14 @@ export const hexToString = ({ red, green, blue, alpha }: HexValues): string => `
  * @param {RgbValues} param0
  * @returns {string}
  */
-export const rgbToString = ({ red, green, blue, alpha }: RgbValues): string => `rgb${alpha ? 'a' : ''}(${red}, ${green}, ${blue}${alpha ? `, ${alpha}` : ''})`
+export const rgbToString = ({ red, green, blue, alpha }: RgbValues): string => `rgb${alpha ? 'a' : ''}(${red},${green},${blue}${alpha ? `,${alpha}` : ''})`
 
 /**
  * @param {HlsValues} param0
  * @returns {string}
  */
 export const hslToString = ({ hue, saturation, lightness, alpha }: HlsValues): string =>
-  `hsl${alpha ? 'a' : ''}(${hue}, ${saturation}%, ${lightness}%${alpha ? `, ${alpha}%` : ''})`
+  `hsl${alpha ? 'a' : ''}(${hue},${saturation}%,${lightness}%${alpha ? `,${alpha}%` : ''})`
 
 /**
  * @param {string} arg

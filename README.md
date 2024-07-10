@@ -1,6 +1,7 @@
 # color-converter.js
 
 Some utilities to convert any CSS color to RGB, HEX and HSL
+This package is for didactic purpose but feel free to use it in your project
 
 ![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/nwl-x/colorConverter.js/release.yml)
 ![GitHub top language](https://img.shields.io/github/languages/top/nwl-x/colorConverter.js?logo=typescript)
@@ -56,13 +57,13 @@ rgbToHex('rgb(255, 0, 0)') // returns #ff0000
 ### Turn HSL color to RGB
 
 ```js
-hslToRgb('hsl(0, 0, 0') // returns rgb(255, 0, 0)
+hslToRgb('hsl(0, 0, 0') // returns rgb(255,0,0)
 ```
 
 ### Turn Named color to HSL
 
 ```js
-colorToHsl('CornflowerBlue') // returns hsl(219, 79%, 66%)
+colorToHsl('CornflowerBlue') // returns hsl(219,79%,66%)
 ```
 
 and so on...
@@ -96,9 +97,17 @@ and so on...
 > - rgba(50%, 20%, 10%, 100/2)
 > - hsl(120, 25%)
 
+> [!TIP]
+> Conversion to HEX, RGB and HSL are compatible with [TailwindCSS](https://tailwindcss.com/docs/text-color#arbitrary-values)
+> Hex is 6/8 characters, RGB and HSL has no spaces
+>
+> ```jsx
+> <section className={`text-[${colorToHsl('BurlyWood')}]`}>...</section>
+> ```
+
 > [!IMPORTANT]
 > All invalides color CSS parameter will return white color per default
 >
 > - #ffffff
-> - rgb(255, 255, 255)
-> - hsl(0, 0%, 100%)
+> - rgb(255,255,255)
+> - hsl(0,0%,100%)
