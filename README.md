@@ -1,7 +1,8 @@
 # color-converter.js
 
-Some utilities to convert any CSS color to RGB, HEX and HSL
-This package is for didactic purpose but feel free to use it in your project
+Some utilities to convert any CSS color to RGB, HEX and HSL.
+
+> This package is for didactic purpose but feel free to use it in your project.
 
 ![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/nwl-x/colorConverter.js/release.yml)
 ![GitHub top language](https://img.shields.io/github/languages/top/nwl-x/colorConverter.js?logo=typescript)
@@ -78,15 +79,15 @@ and so on...
 
 ## Availables APIs parameter
 
-| RBG color syntax          | HEX color syntax | HSL color syntax             | CSS color name                              |
-| ------------------------- | ---------------- | ---------------------------- | ------------------------------------------- |
-| rgb(50, 40, 30)           | #fa1             | hsl(120, 10%, 25%)           | [Any valid CSS color name](NAMED_COLORS.md) |
-| rgba(50%, 40%, 30%, 0.5)  | #fa18            | hsla(120, 10%, 25%, 0.3)     |                                             |
-| rgba(50%, 40%, 30%, 50%)  | #ffaa11          | hsla(120, 10%, 25%, .3)      |                                             |
-| rgba(50%, 40%, 30% / 50%) | #ffaa1188        | hsla(120deg, 10%, 25%, 0.3)  |                                             |
-| rgb(50% 40% 30%)          |                  | hsla(120rad, 10%, 25%, 0.3)  |                                             |
-| rgb(50 40 30)             |                  | hsla(120turn, 10%, 25%, 0.3) |                                             |
-| rgba(50% 20% 10% / 0.5)   |                  |                              |                                             |
+| RBG color syntax          | HEX color syntax | HSL color syntax            | CSS color name                              |
+| ------------------------- | ---------------- | --------------------------- | ------------------------------------------- |
+| rgb(50, 40, 30)           | #fa1             | hsl(50, 40%, 30%)           | [Any valid CSS color name](NAMED_COLORS.md) |
+| rgb(50% 40% 30%)          | #fa18            | hsla(50, 40%, 30%, 0.3)     |                                             |
+| rgb(50 40 30)             | #ffaa11          | hsla(50, 40%, 30%, .3)      |                                             |
+| rgba(50%, 40%, 30% / 50%) | #ffaa1188        | hsla(50deg, 40%, 30%, 0.3)  |                                             |
+| rgba(50%, 40%, 30%, 50%)  |                  | hsla(50rad, 40%, 30%, 0.3)  |                                             |
+| rgba(50%, 40%, 30%, 0.5)  |                  | hsla(50turn, 40%, 30%, 0.3) |                                             |
+| rgba(50% 40% 30% / 0.5)   |                  |                             |                                             |
 
 > [!NOTE]
 > All exotic color CSS parameter are supported
@@ -99,6 +100,7 @@ and so on...
 
 > [!TIP]
 > Conversion to HEX, RGB and HSL are compatible with [TailwindCSS](https://tailwindcss.com/docs/text-color#arbitrary-values)
+>
 > Hex is 6/8 characters, RGB and HSL has no spaces
 >
 > ```jsx
