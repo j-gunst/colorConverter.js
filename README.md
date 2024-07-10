@@ -13,6 +13,12 @@ Some utilities to convert any CSS color to RGB, HEX and HSL
 
 ## Installation
 
+### With [pnpm](https://pnpm.io/fr/)
+
+```bash
+pnpm install @nawael/color-converter.js --save
+```
+
 ### With [npm](https://www.npmjs.com/)
 
 ```bash
