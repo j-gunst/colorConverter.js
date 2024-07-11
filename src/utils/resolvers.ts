@@ -66,8 +66,8 @@ export const resolveHslArgument = (arg: string | HlsArgument): string => {
   const { h = '0', s = '0', l = '100', a = undefined }: HlsArgument = (arg as HlsArgument) || {}
 
   const hue = h.toString()
-  const saturation = s.endsWith('%') ? s.slice(0, -1) : s
-  const lightness = s.endsWith('%') ? l.slice(0, -1) : l
+  const saturation = s.toString().endsWith('%') ? s.slice(0, -1) : s
+  const lightness = s.toString().endsWith('%') ? l.slice(0, -1) : l
   const alpha = a && a.endsWith('%') ? a.slice(0, -1) : a
 
   const hsl = { hue, saturation, lightness, alpha } as HlsValues

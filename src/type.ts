@@ -48,9 +48,9 @@ export type HexArgument = RbgArgument
 
 export type HlsArgument = {
   h: string | number
-  s: string
-  l: string
-  a?: string
+  s: string | number
+  l: string | number
+  a?: string | number
 }
 
 export declare const rgbToHex: (arg: string | RbgArgument) => string

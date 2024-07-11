@@ -59,8 +59,8 @@ describe('convertRgbToHex', () => {
     ${'rgba(50.2%, 20.0%, 10.2%, 50%)'} | ${{ red: 'ff', green: 'ff', blue: 'ff' }}
     ${'rgb(50, 40, 30)'}                | ${{ red: '32', green: '28', blue: '1e' }}
     ${'rgba(128, 51, 26, 0.5)'}         | ${{ red: '80', green: '33', blue: '1a', alpha: '80' }}
-    ${{ r: '50', g: '40', b: '30' }}    | ${{ red: '32', green: '28', blue: '1e' }}
     ${'rgb(50, 40, 30)'}                | ${{ red: '32', green: '28', blue: '1e' }}
+    ${{ r: '50', g: '40', b: '30' }}    | ${{ red: '32', green: '28', blue: '1e' }}
   `(`With $arg returns $expected`, ({ arg, expected }) => expect(convertRgbToHex(arg)).toEqual(expected))
 })
 
@@ -103,11 +103,11 @@ describe('convertHexToRgb', () => {
 describe('convertHexToHls', () => {
   test.each`
     arg                              | expected
-    ${{ r: '0a', g: '14', b: '1e' }} | ${{ hue: '210', saturation: '50', lightness: '8' }}
     ${'#32281e'}                     | ${{ hue: '30', saturation: '25', lightness: '16' }}
     ${'#80664d'}                     | ${{ hue: '29', saturation: '25', lightness: '40' }}
     ${'#32281eaa'}                   | ${{ hue: '30', saturation: '25', lightness: '16', alpha: '70' }}
     ${'#80331a80'}                   | ${{ hue: '15', saturation: '66', lightness: '30', alpha: '50' }}
+    ${{ r: '0a', g: '14', b: '1e' }} | ${{ hue: '210', saturation: '50', lightness: '8' }}
   `(`With $arg returns $expected`, ({ arg, expected }) => expect(convertHexToHls(arg)).toEqual(expected))
 })
 
@@ -126,15 +126,16 @@ describe('convertHslToHex', () => {
 
 describe('convertHslToRgb', () => {
   test.each`
-    arg                            | expected
-    ${'hsl(30deg, 10%, 33%)'}      | ${{ red: '93', green: '84', blue: '76' }}
-    ${'hsl(0.5deg, 10%, 33%)'}     | ${{ red: '93', green: '76', blue: '76' }}
-    ${'hsl(30rad, 10%, 33%)'}      | ${{ red: '87', green: '76', blue: '93' }}
-    ${'hsl(30turn, 10%, 33%)'}     | ${{ red: '76', green: '76', blue: '76' }}
-    ${'hsl(0, 10%, 33%)'}          | ${{ red: '93', green: '76', blue: '76' }}
-    ${'hsl(120, 25%)'}             | ${{ red: '12', green: '13', blue: '12' }}
-    ${'hsla(120, 100%, 25%, 0.3)'} | ${{ red: '0', green: '128', blue: '0', alpha: '0.3' }}
-    ${'hsla(120, 100%, 25%, 0.8)'} | ${{ red: '0', green: '128', blue: '0', alpha: '0.8' }}
+    arg                               | expected
+    ${'hsl(30deg, 10%, 33%)'}         | ${{ red: '93', green: '84', blue: '76' }}
+    ${'hsl(0.5deg, 10%, 33%)'}        | ${{ red: '93', green: '76', blue: '76' }}
+    ${'hsl(30rad, 10%, 33%)'}         | ${{ red: '87', green: '76', blue: '93' }}
+    ${'hsl(30turn, 10%, 33%)'}        | ${{ red: '76', green: '76', blue: '76' }}
+    ${'hsl(0, 10%, 33%)'}             | ${{ red: '93', green: '76', blue: '76' }}
+    ${'hsl(120, 25%)'}                | ${{ red: '12', green: '13', blue: '12' }}
+    ${'hsla(120, 100%, 25%, 0.3)'}    | ${{ red: '0', green: '128', blue: '0', alpha: '0.3' }}
+    ${'hsla(120, 100%, 25%, 0.8)'}    | ${{ red: '0', green: '128', blue: '0', alpha: '0.8' }}
+    ${{ h: '0', s: '10%', l: '33%' }} | ${{ red: '93', green: '76', blue: '76' }}
   `(`With $arg returns $expected`, ({ arg, expected }) => expect(convertHslToRgb(arg)).toEqual(expected))
 })
 

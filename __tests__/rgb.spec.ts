@@ -51,6 +51,8 @@ describe('rgbToHex', () => {
     ${'rgba(50%, 20%, 10% / 0.5)'}    | ${'#80331a80'}
     ${'rgba(50%, 20%, 10%, 100/2)'}   | ${'#80331a80'}
     ${'rgba(50%, 20%, 10%, 100 / 2)'} | ${'#80331a80'}
+    ${{ r: 50, g: 40, b: 30 }}        | ${'#32281e'}
+    ${{ r: 240, g: 248, b: 255 }}     | ${'#f0f8ff'}
   `(`With "$arg" returns "$expected"`, ({ arg, expected }) => expect(rgbToHex(arg)).toBe(expected))
 })
 
@@ -80,5 +82,6 @@ describe('rgbToHsl', () => {
     ${'rgba(50% 20% 10% / 0.5)'}      | ${'hsla(15,66%,30%,50%)'}
     ${'rgba(50%, 20%, 10%, 100/2)'}   | ${'hsla(15,66%,30%,50%)'}
     ${'rgba(50%, 20%, 10%, 100 / 2)'} | ${'hsla(15,66%,30%,50%)'}
+    ${{ r: '50', g: 40, b: 30 }}      | ${'hsl(30,25%,16%)'}
   `(`With "$arg" returns $expected`, ({ arg, expected }) => expect(rgbToHsl(arg)).toBe(expected))
 })
