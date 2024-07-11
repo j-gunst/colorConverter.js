@@ -1,11 +1,5 @@
 # @nawael/color-converter.js
 
-## 1.1.0
-
-### Minor Changes
-
-- 88fa89c: Parameters can be strin or object
-
 ## 1.2.2
 
 ### Patch Changes
