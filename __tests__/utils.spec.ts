@@ -7,11 +7,10 @@ import {
   extractRgbValues,
   extractHexValues,
   extractHslValues,
-  hexToString,
-  rgbToString,
-  hslToString,
   getNamedColorInfos
 } from '../src/utils/utils'
+
+import { formatRgb, formatHex, formatHsl } from '../src/utils/formaters'
 
 describe('isRgbColor', () => {
   test.each`
@@ -169,18 +168,18 @@ describe('extractHslValues', () => {
   })
 })
 
-describe('hexToString', () => {
+describe('formatHex', () => {
   test.each`
     arg                                                         | expected
     ${{ red: '32', green: '28', blue: '1e', alpha: undefined }} | ${'#32281e'}
     ${{ red: '80', green: '66', blue: '4d', alpha: undefined }} | ${'#80664d'}
     ${{ red: '80', green: '33', blue: '1a', alpha: '80' }}      | ${'#80331a80'}
   `(`With "$arg" returns "$expected"`, ({ arg, expected }) => {
-    expect(hexToString(arg)).toEqual(expected)
+    expect(formatHex(arg)).toEqual(expected)
   })
 })
 
-describe('rgbToString', () => {
+describe('formatRgb', () => {
   test.each`
     arg                                                            | expected
     ${{ red: '50', green: '40', blue: '30', alpha: undefined }}    | ${'rgb(50,40,30)'}
@@ -190,11 +189,11 @@ describe('rgbToString', () => {
     ${{ red: '50%', green: '20%', blue: '10%', alpha: '100/2' }}   | ${'rgba(50%,20%,10%,100/2)'}
     ${{ red: '50%', green: '20%', blue: '10%', alpha: '100 / 2' }} | ${'rgba(50%,20%,10%,100 / 2)'}
   `(`With "$arg" returns "$expected"`, ({ arg, expected }) => {
-    expect(rgbToString(arg)).toEqual(expected)
+    expect(formatRgb(arg)).toEqual(expected)
   })
 })
 
-describe('hslToString', () => {
+describe('formatHsl', () => {
   test.each`
     arg                                                                   | expected
     ${{ hue: '0', saturation: '10', lightness: '33', alpha: undefined }}  | ${'hsl(0,10%,33%)'}
@@ -202,7 +201,7 @@ describe('hslToString', () => {
     ${{ hue: '120', saturation: '100', lightness: '25', alpha: '0.3' }}   | ${'hsla(120,100%,25%,0.3%)'}
     ${{ hue: '120', saturation: '2', lightness: '5', alpha: undefined }}  | ${'hsl(120,2%,5%)'}
   `(`With "$arg" returns "$expected"`, ({ arg, expected }) => {
-    expect(hslToString(arg)).toEqual(expected)
+    expect(formatHsl(arg)).toEqual(expected)
   })
 })
 

@@ -5,12 +5,11 @@ export type RgbValues = {
   alpha?: string
 }
 
-export type HexValues = {
-  red: string
-  green: string
-  blue: string
-  alpha?: string
-}
+export type HexValues = RgbValues
+
+export type ChannelValues = RgbValues
+
+export type ChannelType = 'hex' | 'hsl'
 
 export type HlsValues = {
   hue: string
@@ -36,6 +35,22 @@ export type NamedColor = {
 
 export type NamedColors = {
   [key: string]: NamedColor
+}
+
+export type RbgArgument = {
+  r: string | number
+  g: string | number
+  b: string | number
+  a?: string | number
+}
+
+export type HexArgument = RbgArgument
+
+export type HlsArgument = {
+  h: string | number
+  s: string
+  l: string
+  a?: string
 }
 
 export declare const rgbToHex: (arg: string) => string

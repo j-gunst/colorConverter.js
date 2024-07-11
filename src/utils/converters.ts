@@ -1,19 +1,26 @@
-import { rgbToString, isNamedColor, getNamedColorInfos, extractHexValues, extractHslValues, processHexString } from './utils'
+import { formatRgb } from './formaters'
 import { processRgbToHex, processRgbToHls } from './processors'
+import { resolveHexArgument, resolveHslArgument, resolveRgbArgument } from './resolvers'
 import { HEX_DEFAULT_VALUES, RGB_DEFAULT_VALUES, HSL_DEFAULT_VALUES } from './constants'
+import { isNamedColor, getNamedColorInfos, extractHexValues, extractHslValues } from './utils'
 
-import type { HexValues, RgbValues, HlsValues } from '../type'
+import type { HexValues, RgbValues, HlsValues, HexArgument } from '../type'
 
 // ==== RGB(A) ====
 
 /**
- * Convert RGB(A) string to HEX(A) Object
+ * ## Convert RGB(A) string to HEX(A) Object
  *
- * @param {string} arg - a string of the form rgb(r, g, b) or rgba(r,g, b, a)
- * @return {HexValues} an object of the form { red, green, blue } or { red, green, blue, alpha }
+ * @param {string} arg - various formats:
+ *  - rgb[a](r, g, b[, a])
+ *  - { r, g, b[, a] }
+ *
+ * @return {HexValues} { red, green, blue } or { red, green, blue, alpha }
  */
 export const convertRgbToHex = (arg: string): HexValues => {
-  const { red, green, blue, alpha } = processRgbToHex(arg)
+  const rgb = resolveRgbArgument(arg)
+
+  const { red, green, blue, alpha } = processRgbToHex(rgb)
 
   let output: RgbValues = { red, green, blue }
 
@@ -25,13 +32,18 @@ export const convertRgbToHex = (arg: string): HexValues => {
 }
 
 /**
- * Convert RGB(A) string to HSL(A) Object
+ * ## Convert RGB(A) string to HSL(A) Object
  *
- * @param {string} arg - a string of the form rgb(r, g, b) or rgba(r,g, b, a)
- * @return {HlsValues} an object of the form { h, s, l } or { h, s, l, a }
+ * @param {string} arg - various formats:
+ *  - rgb[a](r, g, b[, a])
+ *  - { r, g, b[, a] }
+ *
+ * @return {HlsValues} { h, s, l } or { h, s, l, a }
  */
 export const convertRgbToHls = (arg: string): HlsValues => {
-  const { red, green, blue, alpha } = processRgbToHls(arg)
+  const hsl = resolveRgbArgument(arg)
+
+  const { red, green, blue, alpha } = processRgbToHls(hsl)
 
   const cmin = Math.min(+red, +green, +blue)
   const cmax = Math.max(+red, +green, +blue)
@@ -78,14 +90,18 @@ export const convertRgbToHls = (arg: string): HlsValues => {
 // ==== HEX(A) ====
 
 /**
- * Convert HEX(A) string to RGB(A) Object
+ * ## Convert HEX(A) string to RGB(A) Object
  *
- * @param {string} arg - a string of the form #rrggbb or #rrggbbaa
- * @param {boolean} percent - if true, the result will be a string of the form rgb(r%, g%, b%) or rgba(r%, g%, b%, a%)
- * @return {RgbValues} an object of the form { r, g, b } or { r, g, b, a }
+ * @param {string} arg - various formats:
+ *  - [#]rgb[a]
+ *  - [#]rrggbb[aa]
+ *  - {r, g, b[, a]}
+ * @param {boolean} percent - if true it returns rgb in percent
+ *
+ * @return {RgbValues} { r, g, b } or { r, g, b, a }
  */
-export const convertHexToRgb = (arg: string, percent: boolean = false): RgbValues => {
-  const hex = processHexString(arg)
+export const convertHexToRgb = (arg: string | HexArgument, percent: boolean = false): RgbValues => {
+  const hex = resolveHexArgument(arg)
 
   let { red, green, blue, alpha } = extractHexValues(hex)
 
@@ -99,7 +115,7 @@ export const convertHexToRgb = (arg: string, percent: boolean = false): RgbValue
     blue = `${((+blue / 255) * 100).toFixed(1)}%`
   }
 
-  let output: HexValues = { red, green, blue }
+  let output: RgbValues = { red, green, blue }
 
   if (alpha) {
     alpha = (parseInt(alpha, 16) / 255).toFixed(1)
@@ -115,20 +131,24 @@ export const convertHexToRgb = (arg: string, percent: boolean = false): RgbValue
 }
 
 /**
- * Convert HEX(A) string to HSL(A) Object
+ * ## Convert HEX(A) string to HSL(A) Object
  *
- * @param {string} arg - a string of the form #rrggbb or #rrggbbaa
- * @return {HlsValues} an object of the form { h, s, l } or { h, s, l, a }
+ * @param {string} arg - various formats:
+ *  - [#]rgb[a]
+ *  - [#]rrggbb[aa]
+ *  - {r, g, b[, a]}
+ *
+ * @return {HlsValues} { h, s, l } or { h, s, l, a }
  */
 export const convertHexToHls = (arg: string): HlsValues => {
   // Convert hex to RGB first
   const { red, green, blue, alpha }: HexValues = convertHexToRgb(arg)
 
   // Then to hsl
-  return convertRgbToHls(rgbToString({ red, green, blue, alpha }))
+  return convertRgbToHls(formatRgb({ red, green, blue, alpha }))
 }
 
-// ==== HSL ====
+// ==== HSL(A) ====
 
 export const processHueDeg = (part: number, quote: number, hueDeg: number) => {
   let degree = hueDeg
@@ -264,25 +284,30 @@ export const convertHslPureToRgb = ({ hue, saturation, lightness, alpha }: HlsVa
 }
 
 /**
- * Convert HSL(A) string to RGB(A) Object
+ * ## Convert HSL(A) string to RGB(A) Object
  *
- * @param {string} arg - a string of the form hsl(h, s%, l%) or hsla(h, s%, l%, a%)
- * @return {RgbValues} an object of the form { r, g, b } or { r, g, b, a }
+ * @param {string} arg - various formats:
+ *  - hsl[a](h, s%, l%[, a%])
+ *  - { h, s, l[, a] }
+ *
+ * @return {RgbValues} { r, g, b } or { r, g, b, a }
  */
 export const convertHslToRgb = (arg: string, percent = false): RgbValues => {
-  const { hue, saturation, lightness, alpha } = extractHslValues(arg)
+  const hsl = resolveHslArgument(arg)
 
-  if (hue.indexOf('deg') > -1) {
+  const { hue, saturation, lightness, alpha } = extractHslValues(hsl)
+
+  if (hue.endsWith('deg')) {
     return convertHslDegToRgb({ hue, saturation, lightness })
   }
 
-  if (hue.indexOf('rad') > -1) {
+  if (hue.endsWith('rad')) {
     const radToDeg = (+hue.slice(0, -3) * (180 / Math.PI)) % 360
 
     return convertHslDegToRgb({ hue: `${radToDeg}deg`, saturation, lightness })
   }
 
-  if (hue.indexOf('turn') > -1) {
+  if (hue.endsWith('turn')) {
     const turnToDeg = +hue.slice(0, -3) * 360
 
     return convertHslDegToRgb({ hue: `${turnToDeg}deg`, saturation, lightness })
@@ -292,27 +317,33 @@ export const convertHslToRgb = (arg: string, percent = false): RgbValues => {
 }
 
 /**
- * Convert HSL(A) string to HEX(A) Object
+ * ## Convert HSL(A) string to HEX(A) Object
  *
- * @param {string} arg - a string of the form hsl(h, s%, l%) or hsla(h, s%, l%, a%)
- * @return {HexValues} an object of the form { r, g, b } or { r, g, b, a }
+ * @param {string} arg - various formats:
+ *  - hsl[a](h, s%, l%[, a%])
+ *  - { h, s, l[, a] }
+ *
+ * @return {HexValues} { r, g, b } or { r, g, b, a }
  */
 export const convertHslToHex = (arg: string): HexValues => {
+  const hsl = resolveHslArgument(arg)
+
   // Convert hsl to rgb first
-  const { red, green, blue, alpha } = convertHslToRgb(arg)
+  const { red, green, blue, alpha } = convertHslToRgb(hsl)
 
   // Then to hex
-  return convertRgbToHex(rgbToString({ red, green, blue, alpha }))
+  return convertRgbToHex(formatRgb({ red, green, blue, alpha }))
 }
 
 // ==== Named Color ====
 
 /**
- * Convert named color string to RGB(A) Object
+ * ## Convert named color string to RGB(A) Object
  *
  * @param {string} arg - any of named color
- * @param {boolean} percent if true, the result will be a string of the form rgb(r%, g%, b%) or rgba(r%, g%, b%, a%)
- * @return {RgbValues} an object of the form { r, g, b } or { r, g, b, a }
+ * @param {boolean} percent - if true it returns rgb in percent
+ * s
+ * @return {RgbValues} { r, g, b } or { r, g, b, a }
  */
 export const convertcolorToRgb = (arg: string, percent: boolean = false): RgbValues => {
   if (!isNamedColor(arg)) {
@@ -339,10 +370,11 @@ export const convertcolorToRgb = (arg: string, percent: boolean = false): RgbVal
 }
 
 /**
- * Convert named color string to HEX(A) Object
+ * ## Convert named color string to HEX(A) Object
  *
  * @param {string} arg - any of named color
- * @return {HexValues} an object of the form { r, g, b } or { r, g, b, a }
+ *
+ * @return {HexValues} { r, g, b } or { r, g, b, a }
  */
 export const convertcolorToHex = (arg: string): HexValues => {
   if (!isNamedColor(arg)) {
@@ -359,16 +391,19 @@ export const convertcolorToHex = (arg: string): HexValues => {
     rgb: { red: r, green: g, blue: b }
   } = color
 
-  const { red, green, blue } = processRgbToHex(rgbToString({ red: r.toString(), green: g.toString(), blue: b.toString() }))
+  const { red, green, blue } = processRgbToHex(
+    formatRgb({ red: r.toString(), green: g.toString(), blue: b.toString() })
+  )
 
   return { red: red.toString(), green: green.toString(), blue: blue.toString() }
 }
 
 /**
- * Convert named color string to HSL(A) Object
+ * ## Convert named color string to HSL(A) Object
  *
  * @param {string} arg - any of named color
- * @return {HlsValues} an object of the form { h, s, l } or { h, s, l, a }
+ *
+ * @return {HlsValues} { h, s, l } or { h, s, l, a }
  */
 export const convertcolorToHsl = (arg: string): HlsValues => {
   if (!isNamedColor(arg)) {

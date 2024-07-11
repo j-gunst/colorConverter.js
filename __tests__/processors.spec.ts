@@ -1,24 +1,29 @@
-import { processRgb, processRgbAlpha, processRgbToHex, processHsl, processHslAlpha, processRgbToHls } from '../src/utils/processors'
-
-// ==== RGB(A) to HEX(A) ====
+import { processRgb, processRgbAlpha, processRgbToHex, processRgbToHls } from '../src/utils/processors'
 
 describe('processRgb', () => {
   test.each`
-    arg      | expected
-    ${'250'} | ${'fa'}
-    ${'128'} | ${'80'}
-    ${128}   | ${'80'}
-  `(`With $arg returns $expected`, ({ arg, expected }) => expect(processRgb(arg)).toEqual(expected))
+    arg      | expected                | type
+    ${'250'} | ${'fa'}                 | ${'hex'}
+    ${'128'} | ${'80'}                 | ${'hex'}
+    ${128}   | ${'80'}                 | ${'hex'}
+    ${'250'} | ${'0.9803921568627451'} | ${'hsl'}
+    ${250}   | ${'0.9803921568627451'} | ${'hsl'}
+    ${600}   | ${'1'}                  | ${'hsl'}
+  `(`With $arg returns $expected`, ({ arg, type, expected }) => expect(processRgb(arg, type)).toEqual(expected))
 })
 
 describe('processRgbAlpha', () => {
   test.each`
-    arg       | expected
-    ${0.5}    | ${'80'}
-    ${'50%'}  | ${'80'}
-    ${'20/2'} | ${'1a'}
-  `(`With $arg returns $expected`, ({ arg, expected }) => expect(processRgbAlpha(arg)).toEqual(expected))
+    arg       | expected | type
+    ${0.5}    | ${'80'}  | ${'hex'}
+    ${'50%'}  | ${'80'}  | ${'hex'}
+    ${'20/2'} | ${'1a'}  | ${'hex'}
+    ${0.5}    | ${'50'}  | ${'hsl'}
+    ${'0.3'}  | ${'30'}  | ${'hsl'}
+  `(`With $arg returns $expected`, ({ arg, type, expected }) => expect(processRgbAlpha(arg, type)).toEqual(expected))
 })
+
+// ==== RGB(A) to HEX(A) ====
 
 describe('processRgbToHex', () => {
   test.each`
@@ -30,22 +35,6 @@ describe('processRgbToHex', () => {
 })
 
 // ==== RGB(A) to HSL(A) ====
-
-describe('processHsl', () => {
-  test.each`
-    arg      | expected
-    ${'250'} | ${'0.9803921568627451'}
-    ${250}   | ${'0.9803921568627451'}
-  `(`With $arg returns $expected`, ({ arg, expected }) => expect(processHsl(arg)).toEqual(expected))
-})
-
-describe('processHslAlpha', () => {
-  test.each`
-    arg      | expected
-    ${0.5}   | ${'50'}
-    ${'0.3'} | ${'30'}
-  `(`With $arg returns $expected`, ({ arg, expected }) => expect(processHslAlpha(arg)).toEqual(expected))
-})
 
 describe('processRgbToHls', () => {
   test.each`

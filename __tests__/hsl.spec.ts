@@ -27,7 +27,7 @@ describe('hslTo(Rgb|Hex) with invalid cases', () => {
 describe('hslToRgb', () => {
   test.each`
     arg                         | expected                       | percent
-    ${'hsl(0,10%,33%)'}         | ${'rgb(93,76,76)'}             | ${false}
+    ${'hsl(0,10%,33%)'}         | ${'rgb(36.5%,29.8%,29.8%)'}    | ${true}
     ${"hsl('0',10%,33%)"}       | ${'rgb(93,76,76)'}             | ${false}
     ${'hsl(0,100%,50%)'}        | ${'rgb(255,0,0)'}              | ${false}
     ${'hsl(240,100%,50%)'}      | ${'rgb(0,0,255)'}              | ${false}

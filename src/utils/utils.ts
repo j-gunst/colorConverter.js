@@ -1,5 +1,5 @@
 import namedColors from '../namedColors.json'
-import { RGB_DEFAULT_VALUES, HEX_DEFAULT_VALUES, HSL_DEFAULT_VALUES, HEX_DEFAULT_STRING } from './constants'
+import { RGB_DEFAULT_VALUES, HEX_DEFAULT_VALUES, HSL_DEFAULT_VALUES } from './constants'
 
 import type { RgbValues, HexValues, HlsValues, NamedColor } from '../type'
 
@@ -56,6 +56,7 @@ export const isNamedColor = (arg: string): boolean => {
 
 /**
  * @param {string} arg
+ *
  * @returns {RgbValues}
  */
 export const extractRgbValues = (arg: string): RgbValues => {
@@ -113,51 +114,6 @@ export const extractHslValues = (arg: string): HlsValues => {
 
   return groups
 }
-
-/**
- * @param arg {string} - a string of the form #rgb or #rgba or #rrggbb or #rrggbbaa
- * @returns {string} a string of the form #rrggbb or #rrggbbaa
- */
-export const processHexString = (arg: string): string => {
-  if (!isString(arg) || !arg.startsWith('#')) {
-    return HEX_DEFAULT_STRING
-  }
-
-  const channels = arg.replace('#', '').split('')
-
-  let output = HEX_DEFAULT_STRING
-
-  // #rrggbb or #rrggbbaa
-  if ([6, 8].includes(channels.length)) {
-    output = channels.join('')
-  }
-
-  // #rgb or #rgba
-  if ([3, 4].includes(channels.length)) {
-    output = channels.map((channel) => channel.repeat(2)).join('')
-  }
-
-  return `#${output}`
-}
-
-/**
- * @param {HexValues} param0
- * @returns {string}
- */
-export const hexToString = ({ red, green, blue, alpha }: HexValues): string => `#${red}${green}${blue}${alpha ? alpha : ''}`
-
-/**
- * @param {RgbValues} param0
- * @returns {string}
- */
-export const rgbToString = ({ red, green, blue, alpha }: RgbValues): string => `rgb${alpha ? 'a' : ''}(${red},${green},${blue}${alpha ? `,${alpha}` : ''})`
-
-/**
- * @param {HlsValues} param0
- * @returns {string}
- */
-export const hslToString = ({ hue, saturation, lightness, alpha }: HlsValues): string =>
-  `hsl${alpha ? 'a' : ''}(${hue},${saturation}%,${lightness}%${alpha ? `,${alpha}%` : ''})`
 
 /**
  * @param {string} arg

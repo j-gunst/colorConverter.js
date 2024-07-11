@@ -1,9 +1,10 @@
-import type { RgbValues } from '../type'
+import type { ChannelType, ChannelValues } from '../type'
 import { extractRgbValues } from './utils'
 
 /**
- * @param {string | undefined} alpha - a channel RGB / HSL alpha value
- * @return {string | null} a calculated channel RGB / HSL alpha value
+ * @param {string | undefined} alpha - a channel RGB|HSL alpha value
+ *
+ * @return {string | null} a calculated channel RGB|HSL alpha value
  */
 export const processPercentDivider = (alpha: string | undefined): string | undefined => {
   if (!alpha) {
@@ -25,94 +26,74 @@ export const processPercentDivider = (alpha: string | undefined): string | undef
   return output
 }
 
-// ==== RGB(A) to HEX(A) ====
-
-/**
- * @param {string} channel - a channel RGB value
- * @return {string} a channel HEX value
- */
-export const processRgb = (channel: string): string => {
-  let output = +channel > 255 ? '255' : channel.toString()
-
-  if (output.endsWith('%')) {
-    output = Math.round(255 / (100 / +output.slice(0, -1))).toString()
-  }
-
-  return (+output).toString(16).padStart(2, '0').toString()
-}
-
 /**
  * @param {string | undefined} alpha - a channel RGB alpha value
+ *
  * @return {string | null} a channel HEX alpha value
  */
-export const processRgbAlpha = (alpha: string | undefined): string | undefined => {
+export const processRgbAlpha = (alpha: string | undefined, type: string = 'hex'): string | undefined => {
   const processed = processPercentDivider(alpha)
 
-  if (processed) {
+  if (!processed) {
+    return undefined
+  }
+
+  if (type === 'hex') {
     return Math.round(+processed * 255).toString(16)
   }
 
-  return undefined
+  return `${+processed * 100}`
 }
 
-export const processRgbToHex = (arg: string): RgbValues => {
-  const { red, green, blue, alpha } = extractRgbValues(arg)
-
-  let output: RgbValues = {
-    red: processRgb(red),
-    green: processRgb(green),
-    blue: processRgb(blue)
-  }
-
-  if (alpha) {
-    output = { ...output, alpha: processRgbAlpha(alpha) }
-  }
-
-  return output
-}
-
-// ==== RGB(A) to HSL(A) ====
-
-export const processHsl = (channel: string): string => {
+/**
+ * @param {string} channel - a channel RGB value
+ *
+ * @return {string} a channel HEX value
+ */
+export const processRgb = (channel: string, type: ChannelType = 'hex'): string => {
   let output = +channel > 255 ? '255' : channel.toString()
 
   if (output.endsWith('%')) {
     output = Math.round(255 / (100 / +output.slice(0, -1))).toString()
+  }
+
+  if (type === 'hex') {
+    return (+output).toString(16).padStart(2, '0').toString()
   }
 
   return (+output / 255).toString()
 }
 
-/**
- * @param {string | undefined} alpha - a channel RGB alpha value
- * @return {string | null} a channel HSL alpha value
- */
-export const processHslAlpha = (alpha: string | undefined): string | undefined => {
-  const processed = processPercentDivider(alpha)
-
-  if (processed) {
-    return `${+processed * 100}`
-  }
-
-  return undefined
-}
-
-/**
- * @param {RgbValues} param0 - an object of the form { r, g, b }
- * @return {ChannelValues} an object of the form { red: string, green: string, blue: string }
- */
-export const processRgbToHls = (arg: string): RgbValues => {
+export const processRgbChannel = (arg: string, type: ChannelType = 'hex'): ChannelValues => {
   const { red, green, blue, alpha } = extractRgbValues(arg)
 
-  let output: RgbValues = {
-    red: processHsl(red),
-    green: processHsl(green),
-    blue: processHsl(blue)
+  let output: ChannelValues = {
+    red: processRgb(red, type),
+    green: processRgb(green, type),
+    blue: processRgb(blue, type)
   }
 
   if (alpha) {
-    output = { ...output, alpha: processHslAlpha(alpha) }
+    output = { ...output, alpha: processRgbAlpha(alpha, type) }
   }
 
   return output
+}
+
+/**
+ * @param {RgbValues} arg - rgb[a](r, g, b[, a])
+ *
+ * @return {ChannelValues}
+ */
+export const processRgbToHex = (arg: string): ChannelValues => {
+  return processRgbChannel(arg, 'hex')
+}
+
+/**
+ * @param {RgbValues} arg - hsl[a](h, s%, l%[, a%])
+ *
+ * @return {ChannelValues}
+ */
+export const processRgbToHls = (arg: string): ChannelValues => {
+  return processRgbChannel(arg, 'hsl')
 }
