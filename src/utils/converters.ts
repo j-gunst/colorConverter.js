@@ -4,7 +4,7 @@ import { resolveHexArgument, resolveHslArgument, resolveRgbArgument } from './re
 import { HEX_DEFAULT_VALUES, RGB_DEFAULT_VALUES, HSL_DEFAULT_VALUES } from './constants'
 import { isNamedColor, getNamedColorInfos, extractHexValues, extractHslValues } from './utils'
 
-import type { HexValues, RgbValues, HlsValues, HexArgument } from '../type'
+import type { HexValues, RgbValues, HlsValues, HexArgument, RbgArgument, HlsArgument } from '../type'
 
 // ==== RGB(A) ====
 
@@ -17,7 +17,7 @@ import type { HexValues, RgbValues, HlsValues, HexArgument } from '../type'
  *
  * @return {HexValues} { red, green, blue } or { red, green, blue, alpha }
  */
-export const convertRgbToHex = (arg: string): HexValues => {
+export const convertRgbToHex = (arg: string | RbgArgument): HexValues => {
   const rgb = resolveRgbArgument(arg)
 
   const { red, green, blue, alpha } = processRgbToHex(rgb)
@@ -40,7 +40,7 @@ export const convertRgbToHex = (arg: string): HexValues => {
  *
  * @return {HlsValues} { h, s, l } or { h, s, l, a }
  */
-export const convertRgbToHls = (arg: string): HlsValues => {
+export const convertRgbToHls = (arg: string | RbgArgument): HlsValues => {
   const hsl = resolveRgbArgument(arg)
 
   const { red, green, blue, alpha } = processRgbToHls(hsl)
@@ -140,7 +140,7 @@ export const convertHexToRgb = (arg: string | HexArgument, percent: boolean = fa
  *
  * @return {HlsValues} { h, s, l } or { h, s, l, a }
  */
-export const convertHexToHls = (arg: string): HlsValues => {
+export const convertHexToHls = (arg: string | HexArgument): HlsValues => {
   // Convert hex to RGB first
   const { red, green, blue, alpha }: HexValues = convertHexToRgb(arg)
 
@@ -292,7 +292,7 @@ export const convertHslPureToRgb = ({ hue, saturation, lightness, alpha }: HlsVa
  *
  * @return {RgbValues} { r, g, b } or { r, g, b, a }
  */
-export const convertHslToRgb = (arg: string, percent = false): RgbValues => {
+export const convertHslToRgb = (arg: string | HlsArgument, percent = false): RgbValues => {
   const hsl = resolveHslArgument(arg)
 
   const { hue, saturation, lightness, alpha } = extractHslValues(hsl)
@@ -325,7 +325,7 @@ export const convertHslToRgb = (arg: string, percent = false): RgbValues => {
  *
  * @return {HexValues} { r, g, b } or { r, g, b, a }
  */
-export const convertHslToHex = (arg: string): HexValues => {
+export const convertHslToHex = (arg: string | HlsArgument): HexValues => {
   const hsl = resolveHslArgument(arg)
 
   // Convert hsl to rgb first
