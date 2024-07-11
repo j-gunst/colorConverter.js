@@ -15,7 +15,11 @@ export const resolveRgbArgument = (arg: string | RbgArgument): string => {
     return formatRgb(extractRgbValues(arg as string))
   }
 
-  const { r: red = '255', g: green = '255', b: blue = '255', a: alpha = undefined } = (arg as RbgArgument) || {}
+  const { r = '255', g = '255', b = '255', a: alpha = undefined } = (arg as RbgArgument) || {}
+
+  const red = r.toString().endsWith('%') ? r.toString().slice(0, -1) : r
+  const green = g.toString().endsWith('%') ? g.toString().slice(0, -1) : g
+  const blue = b.toString().endsWith('%') ? b.toString().slice(0, -1) : b
 
   const rbg = { red, green, blue, alpha } as RgbValues
 
@@ -66,9 +70,9 @@ export const resolveHslArgument = (arg: string | HlsArgument): string => {
   const { h = '0', s = '0', l = '100', a = undefined }: HlsArgument = (arg as HlsArgument) || {}
 
   const hue = h.toString()
-  const saturation = s.toString().endsWith('%') ? s.slice(0, -1) : s
-  const lightness = s.toString().endsWith('%') ? l.slice(0, -1) : l
-  const alpha = a && a.endsWith('%') ? a.slice(0, -1) : a
+  const saturation = s.toString().endsWith('%') ? s.toString().slice(0, -1) : s
+  const lightness = s.toString().endsWith('%') ? l.toString().slice(0, -1) : l
+  const alpha = a && a.toString().endsWith('%') ? a.toString().slice(0, -1) : a
 
   const hsl = { hue, saturation, lightness, alpha } as HlsValues
 

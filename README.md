@@ -55,10 +55,12 @@ import { rgbToHex, ... } from '@nawael/color-converter.js'
 import { rgbToHex, ... } from '@nawael/color-converter.js'
 
 // Turn RGB color to HEX
-rgbToHex('rgb(50%, 40%, 30%)') // returns #80664d
+rgbToHex('rgb(50, 40, 30)')         // returns #32281e
+rgbToHex({ r: 50, g: 40, b: 30 })   // returns #32281e
 
 // Turn HSL color to RGB
-hslToRgb('hsl(0,10%,33%)') // returns rgb(93,76,76)
+hslToRgb('hsl(0, 10, 33)')          // returns rgb(93,76,76)
+hslToRgb({ h: 0, s: 10, l: 33 })    // returns rgb(93,76,76)
 
 // Turn HSL color to RGB percentage
 hslToRgb('hsl(0,10%,33%)', true) // returns rgb(36.5%,29.8%,29.8%)
@@ -79,15 +81,23 @@ colorToHsl('CornflowerBlue') // returns hsl(219,79%,66%)
 
 ## Availables APIs parameter
 
-| RBG color              | HEX color | HSL color                | CSS color name                              |
-| ---------------------- | --------- | ------------------------ | ------------------------------------------- |
-| rgb(5, 4, 3)           | #rgb      | hsl(5, 4%, 3%)           | [Any valid CSS color name](NAMED_COLORS.md) |
-| rgb(5% 4% 3%)          | #rgba     | hsla(5, 4%, 3%, 0.3)     |                                             |
-| rgb(5 4 3)             | #rrggbb   | hsla(5, 4%, 3%, .3)      |                                             |
-| rgba(5%, 4%, 3% / 50%) | #rrggbbaa | hsla(5deg, 4%, 3%, 0.3)  |                                             |
-| rgba(5%, 4%, 3%, 50%)  |           | hsla(5rad, 4%, 3%, 0.3)  |                                             |
-| rgba(5%, 4%, 3%, 0.5)  |           | hsla(5turn, 4%, 3%, 0.3) |                                             |
-| rgba(5% 4% 3% / 0.5)   |           |                          |                                             |
+#### Apis parameters can be a string like:
+
+| RBG color                  | HEX color     | HSL color                    | CSS color name                              |
+| -------------------------- | ------------- | ---------------------------- | ------------------------------------------- |
+| `'rgb(5, 4, 3)'`           | `'#rgb'`      | `'hsl(5, 4%, 3%)'`           | [Any valid CSS color name](NAMED_COLORS.md) |
+| `'rgb(5% 4% 3%)'`          | `'#rgba'`     | `'hsla(5, 4%, 3%, 0.3)'`     |                                             |
+| `'rgb(5 4 3)'`             | `'#rrggbb'`   | `'hsla(5, 4%, 3%, .3)'`      |                                             |
+| `'rgba(5%, 4%, 3% / 50%)'` | `'#rrggbbaa'` | `'hsla(5deg, 4%, 3%, 0.3)'`  |                                             |
+| `'rgba(5%, 4%, 3%, 50%)'`  |               | `'hsla(5rad, 4%, 3%, 0.3)'`  |                                             |
+| `'rgba(5%, 4%, 3%, 0.5)'`  |               | `'hsla(5turn, 4%, 3%, 0.3)'` |                                             |
+| `'rgba(5% 4% 3% / 0.5)'`   |               |                              |                                             |
+
+#### Or an object like:
+
+| RBG color            | HEX color            | HSL color            |
+| -------------------- | -------------------- | -------------------- |
+| `{r: 5, g: 4, b: 3}` | `{r: 5, g: 4, b: 3}` | `{h: 5, s: 4, l: 3}` |
 
 > [!NOTE]
 > All exotic color CSS parameter are supported
