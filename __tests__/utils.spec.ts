@@ -208,9 +208,9 @@ describe('formatHsl', () => {
 describe('getNamedColorInfos', () => {
   test.each`
     arg             | expected
-    ${'BlueViolet'} | ${{ name: 'BlueViolet', hex: '#8a2be2', hsl: { hue: 271, lightness: 53, saturation: 76 }, rgb: { blue: 226, green: 43, red: 138 } }}
-    ${'blueviolet'} | ${{ name: 'BlueViolet', hex: '#8a2be2', hsl: { hue: 271, lightness: 53, saturation: 76 }, rgb: { blue: 226, green: 43, red: 138 } }}
-    ${'AliceBlue'}  | ${{ name: 'AliceBlue', hex: '#f0f8ff', hsl: { hue: 208, saturation: 100, lightness: 97 }, rgb: { red: 240, green: 248, blue: 255 } }}
+    ${'BlueViolet'} | ${{ name: 'BlueViolet', tone: 'purple', hex: '#8a2be2', hsl: { hue: 271, lightness: 53, saturation: 76 }, rgb: { blue: 226, green: 43, red: 138 } }}
+    ${'blueviolet'} | ${{ name: 'BlueViolet', tone: 'purple', hex: '#8a2be2', hsl: { hue: 271, lightness: 53, saturation: 76 }, rgb: { blue: 226, green: 43, red: 138 } }}
+    ${'AliceBlue'}  | ${{ name: 'AliceBlue', tone: 'white', hex: '#f0f8ff', hsl: { hue: 208, saturation: 100, lightness: 97 }, rgb: { red: 240, green: 248, blue: 255 } }}
   `(`With "$arg" returns "$expected"`, ({ arg, expected }) => {
     expect(getNamedColorInfos(arg)).toEqual(expected)
   })
