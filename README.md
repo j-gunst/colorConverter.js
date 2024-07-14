@@ -62,12 +62,12 @@ import { rgbToHex, rgbToHsl } from '@nawael/color-converter.js'
 // with string parameter...
 rgbToHex('rgb(50, 40, 30)') // returns #32281e
 // ...or with object parameter
-rgbToHex({ r: 50, g: 40, b: 30 }) // returns #32281e too! :+1:
+rgbToHex({ r: 50, g: 40, b: 30 }) // returns #32281e too!
 
 // with alpha channel...
 rgbToHex('rgba(50, 40, 30, 0.5)') // returns #32281e80
 // ...or
-rgbToHex({ r: 50, g: 40, b: 30, a: 0.5 }) // returns #32281e80 too! It's magic!
+rgbToHex({ r: 50, g: 40, b: 30, a: 0.5 }) // returns #32281e80 too!
 
 // ==== Convert RGB color to HSL ====
 
@@ -104,11 +104,15 @@ hexToRgb('#86d') // returns rgb(136,102,221)
 hexToRgb('#86da') // returns rgba(136,102,221,0.7)
 hexToRgb('#8866dd') // returns rgb(136,102,221)
 hexToRgb('#8866ddaa') // returns rgba(136,102,221,0.7)
+
+// nota bene: hashtag is not required
+hexToRgb('8866dd') // works too!
+
 // ...or with object parameter
 hexToRgb({ r: '8', g: '6', b: 'd' })
 hexToRgb({ r: '8', g: '6', b: 'd', a: 'a' })
 hexToRgb({ r: '88', g: '66', b: 'dd' })
-hexToRgb({ r: '88', g: '66', b: 'dd', a:'aa })
+hexToRgb({ r: '88', g: '66', b: 'dd', a: 'aa' })
 
 // ==== Convert HEX color to HSL ====
 
