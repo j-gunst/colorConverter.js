@@ -1,8 +1,9 @@
 # color-converter.js
 
-Some utilities to convert any CSS color to RGB, HEX and HSL.
+Some utilities to convert any CSS color from RGB, HEX and HSL to RGB, HEX and HSL.
 
-> This package is for didactic purpose but feel free to use it in your project.
+> [!NOTE]
+> This package is for didactic purpose but feel free to use it in your project!
 
 ![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/nwl-x/colorConverter.js/release.yml)
 [![codecov](https://codecov.io/github/nwl-x/colorConverter.js/graph/badge.svg?token=90G08PPK2H)](https://codecov.io/github/nwl-x/colorConverter.js)
@@ -50,27 +51,97 @@ import { rgbToHex, ... } from '@nawael/color-converter.js'
 
 ## Usage examples
 
-### Turn RGB color to HEX
+<details>
+<summary>RGB(A) conversion</summary>
 
-```js
-import { rgbToHex, ... } from '@nawael/color-converter.js'
+```javascript
+// ==== Convert RGB color to HEX ====
 
-// Turn RGB color to HEX
-rgbToHex('rgb(50, 40, 30)')         // returns #32281e
-rgbToHex({ r: 50, g: 40, b: 30 })   // returns #32281e
+// with string parameter...
+rgbToHex('rgb(50, 40, 30)') // returns #32281e
+// ...or with object parameter
+rgbToHex({ r: 50, g: 40, b: 30 }) // returns #32281e too! :+1:
 
-// Turn HSL color to RGB
-hslToRgb('hsl(0, 10, 33)')          // returns rgb(93,76,76)
-hslToRgb({ h: 0, s: 10, l: 33 })    // returns rgb(93,76,76)
+// with alpha channel...
+rgbToHex('rgba(50, 40, 30, 0.5)') // returns #32281e80 too! It's magic!
+// ...or
+rgbToHex({ r: 50, g: 40, b: 30, a: 0.5 }) // returns #32281e80
 
-// Turn HSL color to RGB percentage
-hslToRgb('hsl(0,10%,33%)', true) // returns rgb(36.5%,29.8%,29.8%)
+// ==== Convert RGB color to HSL ====
 
-// Turn Named color to HSL
-colorToHsl('CornflowerBlue') // returns hsl(219,79%,66%)
+// with string parameter...
+rgbToHsl('rgb(50, 40, 30)') // returns hsl(30,25%,16%)
+// ...or with object parameter
+rgbToHsl({ r: 50, g: 40, b: 30 }) // returns hsl(219,79%,66%)
+
+// with alpha channel...
+rgbToHsl('rgba(50, 40, 30, 0.5)') // returns hsl(219,79%,66%)
+// ...or
+rgbToHsl({ r: 50, g: 40, b: 30, a: 0.5 }) // returns hsl(219,79%,66%)
+```
+
+</details>
+
+<details>
+<summary>HEX(A) conversion</summary>
+
+```javascript
+// ==== Convert HEX color to RGB ====
 
 // and so on...
 ```
+
+</details>
+
+<details>
+<summary>HSL(A) conversion</summary>
+
+```javascript
+// ==== Convert HSL color to RGB ====
+
+// with string parameter...
+hslToRgb('hsl(0, 10, 33)') // returns rgb(93,76,76)
+
+// ...or with object parameter
+hslToRgb({ h: 0, s: 10, l: 33 }) // returns rgb(93,76,76)
+
+// ==== Convert HSL color to RGB percentage ====
+
+// with string parameter...
+hslToRgb('hsl(0,10%,33%)', true) // returns rgb(36.5%,29.8%,29.8%)
+
+// ...or with object parameter
+hslToRgb({ h: 0, s: 10, l: 33 }, true) // returns rgb(36.5%,29.8%,29.8%)
+
+// ==== Convert HSL color to HEX ====
+
+// with string parameter...
+hslToHex('hsl(0, 10, 33)') // returns #32281e
+
+// ...or with object parameter
+hslToHex({ h: 0, s: 10, l: 33 }) // returns #32281e
+```
+
+</details>
+
+<details>
+<summary>Named color conversion</summary>
+
+```javascript
+// ==== Convert Named color to HSL ====
+
+colorToHsl('CornflowerBlue') // returns hsl(219,79%,66%)
+
+// ==== Convert Named color to RGB ====
+
+colorToRgb('CornflowerBlue') // returns rgb(100,149,237)
+
+// ==== Convert Named color to HEX ====
+
+colorToHex('CornflowerBlue') // returns #6495ed
+```
+
+</details>
 
 ## Available APIs
 
