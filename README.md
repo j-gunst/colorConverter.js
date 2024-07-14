@@ -63,21 +63,21 @@ rgbToHex('rgb(50, 40, 30)') // returns #32281e
 rgbToHex({ r: 50, g: 40, b: 30 }) // returns #32281e too! :+1:
 
 // with alpha channel...
-rgbToHex('rgba(50, 40, 30, 0.5)') // returns #32281e80 too! It's magic!
+rgbToHex('rgba(50, 40, 30, 0.5)') // returns #32281e80
 // ...or
-rgbToHex({ r: 50, g: 40, b: 30, a: 0.5 }) // returns #32281e80
+rgbToHex({ r: 50, g: 40, b: 30, a: 0.5 }) // returns #32281e80 too! It's magic!
 
 // ==== Convert RGB color to HSL ====
 
 // with string parameter...
 rgbToHsl('rgb(50, 40, 30)') // returns hsl(30,25%,16%)
 // ...or with object parameter
-rgbToHsl({ r: 50, g: 40, b: 30 }) // returns hsl(219,79%,66%)
+rgbToHsl({ r: 50, g: 40, b: 30 }) // returns hsl(30,25%,16%)
 
 // with alpha channel...
-rgbToHsl('rgba(50, 40, 30, 0.5)') // returns hsl(219,79%,66%)
+rgbToHsl('rgba(50, 40, 30, 0.5)') // returns hsla(30,25%,16%,50%)
 // ...or
-rgbToHsl({ r: 50, g: 40, b: 30, a: 0.5 }) // returns hsl(219,79%,66%)
+rgbToHsl({ r: 50, g: 40, b: 30, a: 0.5 }) // returns hsla(30,25%,16%,50%)
 ```
 
 </details>
@@ -87,6 +87,28 @@ rgbToHsl({ r: 50, g: 40, b: 30, a: 0.5 }) // returns hsl(219,79%,66%)
 
 ```javascript
 // ==== Convert HEX color to RGB ====
+
+// Hex color can be in short or long format
+// 3 digits: #rgb => #rrggb
+// 4 digits: #rgba => #rrggbbaa
+// 6 digits: #rrggbb
+// 8 digits: #rrggbbaa
+
+hexToHsl
+// with string parameter...
+hexToRgb('#86d') // returns rgb(136,102,221)
+hexToRgb('#86da') // returns rgba(136,102,221,0.7)
+hexToRgb('#8866dd') // returns rgb(136,102,221)
+hexToRgb('#8866ddaa') // returns rgba(136,102,221,0.7)
+// ...or with object parameter
+hexToRgb({ r: '8', g: '6', b: 'd' })
+hexToRgb({ r: '8', g: '6', b: 'd', a: 'a' })
+hexToRgb({ r: '88', g: '66', b: 'dd' })
+hexToRgb({ r: '88', g: '66', b: 'dd', a:'aa })
+
+// ==== Convert HEX color to HSL ====
+hexToHsl('#8866dd') // returns hsl(257,64%,63%)
+hexToHsl('#8866ddaa') // returns hsla(257,64%,63%,0.7)
 
 // and so on...
 ```
@@ -100,15 +122,15 @@ rgbToHsl({ r: 50, g: 40, b: 30, a: 0.5 }) // returns hsl(219,79%,66%)
 // ==== Convert HSL color to RGB ====
 
 // with string parameter...
-hslToRgb('hsl(0, 10, 33)') // returns rgb(93,76,76)
+hslToRgb('hsl(0, 10%, 33%)') // returns rgb(93,76,76)
 
 // ...or with object parameter
 hslToRgb({ h: 0, s: 10, l: 33 }) // returns rgb(93,76,76)
 
-// ==== Convert HSL color to RGB percentage ====
+// ==== Convert HSL color to RGB with percentage ====
 
 // with string parameter...
-hslToRgb('hsl(0,10%,33%)', true) // returns rgb(36.5%,29.8%,29.8%)
+hslToRgb('hsl(0, 10%, 33%)', true) // returns rgb(36.5%,29.8%,29.8%)
 
 // ...or with object parameter
 hslToRgb({ h: 0, s: 10, l: 33 }, true) // returns rgb(36.5%,29.8%,29.8%)
@@ -116,10 +138,10 @@ hslToRgb({ h: 0, s: 10, l: 33 }, true) // returns rgb(36.5%,29.8%,29.8%)
 // ==== Convert HSL color to HEX ====
 
 // with string parameter...
-hslToHex('hsl(0, 10, 33)') // returns #32281e
+hslToHex('hsl(0, 10%, 33%)') // returns #5d4c4c
 
 // ...or with object parameter
-hslToHex({ h: 0, s: 10, l: 33 }) // returns #32281e
+hslToHex({ h: 0, s: 10, l: 33 }) // returns #5d4c4c
 ```
 
 </details>
