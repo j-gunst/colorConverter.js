@@ -5,6 +5,7 @@ Some utilities to convert any CSS color to RGB, HEX and HSL.
 > This package is for didactic purpose but feel free to use it in your project.
 
 ![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/nwl-x/colorConverter.js/release.yml)
+[![codecov](https://codecov.io/github/nwl-x/colorConverter.js/graph/badge.svg?token=90G08PPK2H)](https://codecov.io/github/nwl-x/colorConverter.js)
 ![GitHub top language](https://img.shields.io/github/languages/top/nwl-x/colorConverter.js?logo=typescript)
 ![GitHub License](https://img.shields.io/github/license/nwl-x/colorConverter.js)
 ![NPM Downloads](https://img.shields.io/npm/dw/%40nawael%2Fcolor-converter.js?logo=npm)
