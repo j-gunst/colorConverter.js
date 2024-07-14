@@ -1,5 +1,11 @@
 # @nawael/color-converter.js
 
+## 1.3.1
+
+### Patch Changes
+
+- c1bc210: Named colors list sorted by tone
+
 ## 1.3.0
 
 ### Minor Changes
