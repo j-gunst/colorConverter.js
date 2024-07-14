@@ -55,6 +55,8 @@ import { rgbToHex, ... } from '@nawael/color-converter.js'
 <summary>RGB(A) conversion</summary>
 
 ```javascript
+import { rgbToHex, rgbToHsl } from '@nawael/color-converter.js'
+
 // ==== Convert RGB color to HEX ====
 
 // with string parameter...
@@ -86,6 +88,8 @@ rgbToHsl({ r: 50, g: 40, b: 30, a: 0.5 }) // returns hsla(30,25%,16%,50%)
 <summary>HEX(A) conversion</summary>
 
 ```javascript
+import { hexToRgb, hexToHsl } from '@nawael/color-converter.js'
+
 // ==== Convert HEX color to RGB ====
 
 // Hex color can be in short or long format
@@ -107,6 +111,7 @@ hexToRgb({ r: '88', g: '66', b: 'dd' })
 hexToRgb({ r: '88', g: '66', b: 'dd', a:'aa })
 
 // ==== Convert HEX color to HSL ====
+
 hexToHsl('#8866dd') // returns hsl(257,64%,63%)
 hexToHsl('#8866ddaa') // returns hsla(257,64%,63%,0.7)
 
@@ -119,6 +124,8 @@ hexToHsl('#8866ddaa') // returns hsla(257,64%,63%,0.7)
 <summary>HSL(A) conversion</summary>
 
 ```javascript
+import { hslToRgb, hslToHex } from '@nawael/color-converter.js'
+
 // ==== Convert HSL color to RGB ====
 
 // with string parameter...
@@ -150,17 +157,16 @@ hslToHex({ h: 0, s: 10, l: 33 }) // returns #5d4c4c
 <summary>Named color conversion</summary>
 
 ```javascript
-// ==== Convert Named color to HSL ====
+import { colorToRgb, colorToHex, colorToHsl } from '@nawael/color-converter.js'
 
-colorToHsl('CornflowerBlue') // returns hsl(219,79%,66%)
-
-// ==== Convert Named color to RGB ====
-
+// Convert Named color to RGB
 colorToRgb('CornflowerBlue') // returns rgb(100,149,237)
 
-// ==== Convert Named color to HEX ====
-
+// Convert Named color to HEX
 colorToHex('CornflowerBlue') // returns #6495ed
+
+// Convert Named color to HSL
+colorToHsl('CornflowerBlue') // returns hsl(219,79%,66%)
 ```
 
 </details>
@@ -189,9 +195,10 @@ colorToHex('CornflowerBlue') // returns #6495ed
 
 #### Or an object like:
 
-| RBG color            | HEX color            | HSL color            |
-| -------------------- | -------------------- | -------------------- |
-| `{r: 5, g: 4, b: 3}` | `{r: 5, g: 4, b: 3}` | `{h: 5, s: 4, l: 3}` |
+| RBG color                    | HEX color                    | HSL color                    |
+| ---------------------------- | ---------------------------- | ---------------------------- |
+| `{r: 5, g: 4, b: 3}`         | `{r: 5, g: 4, b: 3}`         | `{h: 5, s: 4, l: 3}`         |
+| `{r: 5, g: 4, b: 3, a: 0.5}` | `{r: 5, g: 4, b: 3, a: 0.5}` | `{h: 5, s: 4, l: 3, a: 0.5}` |
 
 > [!NOTE]
 > All exotic color CSS parameter are supported
