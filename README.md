@@ -5,15 +5,15 @@ Some utilities to convert any CSS color from RGB, HEX and HSL to RGB, HEX and HS
 > [!NOTE]
 > This package is for didactic purpose but feel free to use it in your project!
 
-![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/nwl-x/colorConverter.js/release.yml)
-[![codecov](https://codecov.io/github/nwl-x/colorConverter.js/graph/badge.svg?token=90G08PPK2H)](https://codecov.io/github/nwl-x/colorConverter.js)
-![GitHub top language](https://img.shields.io/github/languages/top/nwl-x/colorConverter.js?logo=typescript)
-![GitHub License](https://img.shields.io/github/license/nwl-x/colorConverter.js)
+![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/j-gunst/colorConverter.js/release.yml)
+[![codecov](https://codecov.io/github/j-gunst/colorConverter.js/graph/badge.svg?token=90G08PPK2H)](https://codecov.io/github/j-gunst/colorConverter.js)
+![GitHub top language](https://img.shields.io/github/languages/top/j-gunst/colorConverter.js?logo=typescript)
+![GitHub License](https://img.shields.io/github/license/j-gunst/colorConverter.js)
 ![NPM Downloads](https://img.shields.io/npm/dw/%40nawael%2Fcolor-converter.js?logo=npm)
 ![NPM Version](https://img.shields.io/npm/v/%40nawael%2Fcolor-converter.js)
 ![npm bundle size](https://img.shields.io/bundlephobia/min/%40nawael%2Fcolor-converter.js)
 
-![Banner](https://raw.githubusercontent.com/nwl-x/colorConverter.js/main/banner.webp)
+![Banner](https://raw.githubusercontent.com/j-gunst/colorConverter.js/main/banner.webp)
 
 ## Installation
 

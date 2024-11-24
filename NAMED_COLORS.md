@@ -1,6 +1,6 @@
 ## List of Named Colors fullfilling the [CSS Color Module Level 4 specifications](https://www.w3.org/TR/css-color-4/#color-keywords)
 
-Generated from [this free JSON file](https://raw.githubusercontent.com/nwl-x/colorConverter.js/main/src/namedColors.json).
+Generated from [this free JSON file](https://raw.githubusercontent.com/j-gunst/colorConverter.js/main/src/namedColors.json).
 | Name | Hex | RGB | HSL |
 | ------------------------------------------------------------------------------------------- | --------- | -------------------- | --------------------- |
 | ![#191970](https://placehold.co/100x15/191970/ffffff?text=MidnightBlue&font=roboto) | `#191970` | `rgb(25, 25, 112)` | `hsl(240, 64%, 27%)` |

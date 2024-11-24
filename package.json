@@ -13,7 +13,7 @@
   "author": "Nawael",
   "repository": {
     "type": "git",
-    "url": "https://github.com/nwl-x/ColorConverter.js.git"
+    "url": "https://github.com/j-gunst/ColorConverter.js.git"
   },
   "license": "MIT",
   "main": "dist/cjs/index.js",
