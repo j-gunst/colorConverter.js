@@ -1,5 +1,11 @@
 # @nawael/color-converter.js
 
+## 1.4.2
+
+### Patch Changes
+
+- 91ec6f6: xxx
+
 ## 1.4.1
 
 ### Patch Changes
