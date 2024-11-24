@@ -1,5 +1,11 @@
 # @nawael/color-converter.js
 
+## 1.4.0
+
+### Minor Changes
+
+- ed7a790: reload
+
 ## 1.3.1
 
 ### Patch Changes
